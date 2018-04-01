@@ -1071,7 +1071,7 @@
              */
             private static Connection getConnectionHeroku(){
                 try {
-                    URI dbUri = null;
+                    URI dbUri;
                     dbUri = new URI(System.getenv("DATABASE_URL"));
 
                     String username = dbUri.getUserInfo().split(":")[0];
