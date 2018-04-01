@@ -99,8 +99,8 @@
         </dependency>
 
         <dependency>
-            <groupId>com.assetx</groupId>
-            <artifactId>assetx-utils</artifactId>
+            <groupId>assetx</groupId>
+            <artifactId>assetx</artifactId>
             <version>1.0</version>
         </dependency>
         <dependency>
