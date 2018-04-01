@@ -1,0 +1,7 @@
+{
+  "name" : "alessandro",
+  "host" : "example",
+  "group" : {
+      "name" : "nome"
+  }
+}

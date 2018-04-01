@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="AssetMax:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/AssetMax_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="AssetMax/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="AssetMax" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
