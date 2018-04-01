@@ -512,7 +512,7 @@
                             passwordFounded = true;
                         if (emailFounded && passwordFounded && resultSet.getString("attivo").equals("1"))
                             attivato = true;
-
+                        connection.close();
                     }
                     //Genero output
                     if (!emailFounded)

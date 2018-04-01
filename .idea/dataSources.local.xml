@@ -7,8 +7,8 @@
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
-      <first-sync>true</first-sync>
       <user-name>pshfowiwfzxyef</user-name>
+      <introspection-schemas>dd6auq15qvb9aa:public</introspection-schemas>
     </data-source>
   </component>
 </project>
