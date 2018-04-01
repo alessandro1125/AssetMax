@@ -15,7 +15,7 @@ public class Home extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp){
         try {
-            RequestDispatcher view = req.getRequestDispatcher("login");
+            RequestDispatcher view = req.getRequestDispatcher("index_exemple.jsp");
             view.forward(req,resp);
         }catch (Exception e){
             e.printStackTrace();

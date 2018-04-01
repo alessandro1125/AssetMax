@@ -6,7 +6,6 @@
 <%@ page import="java.util.Base64" %>
 <%@ page import="java.io.IOException" %>
 <%@ page import="java.util.GregorianCalendar" %>
-<%@ page import="sun.misc.Request" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE HTML>
 <html lang="it" dir="ltr">
@@ -332,7 +331,7 @@
                     <input type="submit" value="Sign In">
                 </form>
                 <form action="${pageContext.request.contextPath}/sign_in?action=3" method="post">
-                    <input type="submit"value="Reset Password">
+                    <input type="submit" value="Reset Password">
                 </form>
             </div>
         </div>

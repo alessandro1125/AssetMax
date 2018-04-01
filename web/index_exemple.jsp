@@ -11,9 +11,12 @@
 
         <%
 
+
+            createTable();
+
             //Reindirizzo al login
             //createTable();
-            String redirectURL = "login.jsp?action=0";
+            String redirectURL = "/login";
             response.sendRedirect(redirectURL);
 
         %>
@@ -53,17 +56,14 @@
                 Statement stmt = null;
                 Connection connection;
 
-                String query = "CREATE TABLE users (" +
-                                    "email VARCHAR(255)," +
-                                    "password VARCHAR(255), " +
-                                    "nome VARCHAR(255)," +
-                                    "cognome VARCHAR(255)," +
-                                    "anno VARCHAR(255)," +
-                                    "mese VARCHAR(255)," +
-                                    "giorno VARCHAR(255)," +
-                                    "attivo VARCHAR(255)," +
-                                    "passkey VARCHAR(255)," +
-                                    "devices_uid VARCHAR(255));";
+                String query = "CREATE TABLE assetMaxUsers (" +
+                                    "ID int PRIMARY KEY AUTO_INCREMENT," +
+                                    "NAME VARCHAR(255), " +
+                                    "EMAIL VARCHAR(255)," +
+                                    "ACCOUNT_ID VARCHAR(255)," +
+                                    "ACTIVE VARCHAR(255)," +
+                                    "ATTIVO VARCHAR(255)," +
+                                    "PASSKEY VARCHAR(255));";
 
                 try {
                     connection = getConnection();
