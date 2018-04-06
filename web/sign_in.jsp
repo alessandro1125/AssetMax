@@ -387,6 +387,7 @@
                         map.put("name", name);
                         map.put("passkey", passkey);
                         map.put("attivo", "0");
+                        map.put("active", "0");
                         map.put("account_id", "0");
 
                         Connection connection = null;
