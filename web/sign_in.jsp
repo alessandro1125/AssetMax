@@ -772,7 +772,7 @@
             private static boolean updatePassword(Connection connection, String email, String password){
 
                 Statement stmt;
-                String query = "UPDATE users SET passkey='0',password='" + password + "' WHERE email='" + email + "'";
+                String query = "UPDATE assetmaxusers SET passkey='0',password='" + password + "' WHERE email='" + email + "'";
 
                 try {
                     stmt = connection.createStatement();
@@ -796,7 +796,7 @@
             private static boolean updatePasskey(Connection connection, String email, String passkey){
 
                 Statement stmt;
-                String query = "UPDATE users SET passkey='" + passkey + "' WHERE email='" + email + "'";
+                String query = "UPDATE assetmaxusers SET passkey='" + passkey + "' WHERE email='" + email + "'";
 
                 try {
                     stmt = connection.createStatement();
@@ -864,7 +864,7 @@
             private static boolean updateActivtion(Connection connection, String email){
 
                 Statement stmt;
-                String query = "UPDATE users SET attivo='1', passkey='0' WHERE email='" + email + "'";
+                String query = "UPDATE assetmaxusers SET attivo='1', passkey='0' WHERE email='" + email + "'";
 
                 try {
                     stmt = connection.createStatement();
@@ -891,7 +891,7 @@
                 Statement statement;
                 String query;
 
-                query = "SELECT passkey FROM users WHERE email='" + email +"'";
+                query = "SELECT passkey FROM assetmaxusers WHERE email='" + email +"'";
 
                 try{
                     statement = connection.createStatement();
@@ -926,7 +926,7 @@
                 Statement statement;
                 String query;
 
-                query = "SELECT email FROM users";//TODO restringere la ricarca
+                query = "SELECT email FROM assetmaxusers";//TODO restringere la ricarca
 
                 try{
                     statement = connection.createStatement();
@@ -956,7 +956,7 @@
                 Statement statement;
                 String query;
 
-                query = "SELECT email,attivo FROM users";
+                query = "SELECT email,attivo FROM assetmaxusers";
 
                 try{
                     statement = connection.createStatement();
