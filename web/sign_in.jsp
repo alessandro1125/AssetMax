@@ -376,7 +376,7 @@
                     String passkeyUrlEncoded = URLEncoder.encode(new String(Base64.getEncoder().encode(passkey.getBytes())), "UTF-8");
                     String emailUrlEncoded = URLEncoder.encode(new String(Base64.getEncoder().encode(email.getBytes())), "UTF-8");
                     String text = "To confirm your Get Advertisment Account click to the following link: " +
-                            "https://getadvertisment.herokuapp.com/sign_in?action=2&passkey=" + passkeyUrlEncoded
+                            "https://assetmax.herokuapp.com/sign_in?action=2&passkey=" + passkeyUrlEncoded
                             + "&email=" + emailUrlEncoded;
                     if(sendEmail(email, text, "User confirmation")){
 
@@ -556,7 +556,7 @@
 
                         //Invio la passkey per email
                         String textPass = "To change your password please click on this link: " +
-                                "https://getadvertisment.herokuapp.com/sign_in?action=5&email="+
+                                "https://assetmax.herokuapp.com/sign_in?action=5&email="+
                                 URLEncoder.encode(new String(Base64.getEncoder().encode(email4.getBytes())),"UTF-8")
                                 + "&passkey=" +URLEncoder.encode(new String(Base64.getEncoder().encode(passkeyPass.getBytes())),"UTF-8");
                         if(sendEmail(email4, textPass, "Reset password")){
