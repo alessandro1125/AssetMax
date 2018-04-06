@@ -261,45 +261,9 @@
             <p id="reportMessage" style="display: none"></p>
             <form action="sign_in?action=1" method="post">
                 <input type="text" id="nome" name="nome" placeholder="Name...">
-                <input type="text" id="cognome" name="cognome" placeholder="Surname..." style="display: none">
                 <input type="email" id="email" name="email" placeholder="Email..." style="display: none">
                 <input type="password" id="password" name="password" placeholder="Password..." style="display: none">
                 <input type="password" id="password_rep" placeholder="Repeat password..." style="display: none">
-                <select style="display: none" id="anno" name = "anno">
-                    <%
-                        int year = Calendar.getInstance().get(Calendar.YEAR);
-                        for (int i = 1900; i<= year; i++){
-                    %>
-                        <option value="<%= Integer.toString(i)%>"><%= Integer.toString(i)%></option>
-                    <%
-                        }
-                    %>
-                </select>
-
-                <select style="display: none" id="mese" name="mese">
-                    <option value="January">January</option>
-                    <option value="February">February</option>
-                    <option value="March">March</option>
-                    <option value="April">April</option>
-                    <option value="May">May</option>
-                    <option value="June">June</option>
-                    <option value="July">July</option>
-                    <option value="August">August</option>
-                    <option value="September">September</option>
-                    <option value="October">October</option>
-                    <option value="November">November</option>
-                    <option value="December">December</option>
-                </select>
-
-                <select style="display: none" id="giorno" name="giorno">
-                    <%
-                        for (int i = 1; i<= 31; i++){
-                    %>
-                    <option value="<%= Integer.toString(i)%>"><%= Integer.toString(i)%></option>
-                    <%
-                        }
-                    %>
-                </select>
 
                 <input type="submit" id="submit" style="display: none" value="Sing In">
             </form>
@@ -322,7 +286,7 @@
                         //Controllo che il campo nome non sia vuoto
                         if (document.getElementById("nome").value.localeCompare("") !== 0){
                             document.getElementById("nome").style.display = "none";
-                            document.getElementById("cognome").style.display = "block";
+                            document.getElementById("email").style.display = "block";
                             document.getElementById("reportMessage").style.display = "none";//Nascodo il messaggio
 
                             state++;
@@ -334,20 +298,6 @@
                         break;
 
                     case 1:
-                        if (document.getElementById("cognome").value.localeCompare("") !== 0){
-                            document.getElementById("cognome").style.display = "none";
-                            document.getElementById("email").style.display = "block";
-                            document.getElementById("reportMessage").style.display = "none";//Nascodo il messaggio
-
-                            state++;
-                        }else {
-                            document.getElementById("reportMessage").style.display = "block";
-                            document.getElementById("reportMessage").innerHTML = "Enter a valid value for Surname";//Mostro il messaggio
-                            document.getElementById("cognome").value = "";
-                        }
-                        break;
-
-                    case 2:
                         if (document.getElementById("email").value.localeCompare("") !== 0 &&
                                 (document.getElementById("email").value.search("@") !== -1)){
                             document.getElementById("email").style.display = "none";
@@ -363,16 +313,19 @@
                         }
                         break;
 
-                    case 3:
+                    case 2:
                         if (document.getElementById("password").value.length >=8){
+                            //Confronto le 2 password
                             if(document.getElementById("password").value.localeCompare
                                 (document.getElementById("password_rep").value) === 0){
                                 document.getElementById("password").style.display = "none";
                                 document.getElementById("password_rep").style.display = "none";
-                                document.getElementById("anno").style.display = "block";
                                 document.getElementById("reportMessage").style.display = "none";//Nascodo il messaggio
 
-                                state++;
+                                //Mostro i pulsanti
+                                document.getElementById("next").style.display = "none";
+                                document.getElementById("submit").type = "submit";//TODO remove con controllo errori
+                                document.getElementById("submit").style.display = "block";
                             }else {
                                 document.getElementById("reportMessage").style.display = "block";
                                 document.getElementById("reportMessage").innerHTML = "Passwords must be the same";//Mostro il messaggio
@@ -385,38 +338,6 @@
                             document.getElementById("password").value = "";
                             document.getElementById("password_rep").value = "";
                         }
-                        break;
-
-                    case 4:
-                        if(document.getElementById("anno").value.localeCompare("") !== 0){
-                            document.getElementById("anno").style.display = "none";
-                            document.getElementById("mese").style.display = "block";
-                            document.getElementById("reportMessage").style.display = "none";//Nascodo il messaggio
-
-                            state++;
-                        }else {
-                            document.getElementById("reportMessage").style.display = "block";
-                            document.getElementById("reportMessage").innerHTML = "Select a valid value";//Mostro il messaggio
-                        }
-
-                        break;
-
-                    case 5:
-                        if(document.getElementById("mese").value.localeCompare("") !== 0){
-                            document.getElementById("mese").style.display = "none";
-                            document.getElementById("giorno").style.display = "block";
-                            document.getElementById("reportMessage").style.display = "none";//Nascodo il messaggio
-
-                            document.getElementById("next").style.display = "none";
-                            document.getElementById("submit").type = "submit";
-                            document.getElementById("submit").style.display = "block";
-
-                            state++;
-                        }else {
-                            document.getElementById("reportMessage").style.display = "block";
-                            document.getElementById("reportMessage").innerHTML = "Select a valid value";//Mostro il messaggio
-                        }
-
                         break;
 
                     default:
@@ -435,18 +356,10 @@
                     String email = null;
                     String password = null;
                     String name = null;
-                    String surname = null;
-                    String anno = null;
-                    String mese = null;
-                    String giorno = null;
                     try{
                         email = request.getParameter("email");
                         password = request.getParameter("password");
                         name = request.getParameter("nome");
-                        surname = request.getParameter("cognome");
-                        anno = request.getParameter("anno");
-                        mese = request.getParameter("mese");
-                        giorno = request.getParameter("giorno");
                     }catch (NullPointerException e){;
                         e.printStackTrace();
                         String redirectURL = "login?action=0&message=" +
@@ -472,13 +385,9 @@
                         map.put("email", email);
                         map.put("password", password);
                         map.put("nome", name);
-                        map.put("cognome", surname);
-                        map.put("anno", anno);
-                        map.put("mese", mese);
-                        map.put("giorno", giorno);
-                        map.put("attivo", "0");
                         map.put("passkey", passkey);
-                        map.put("devices_uid", "0");
+                        map.put("attivo", "0");
+                        map.put("account_id", "0");
 
                         Connection connection = null;
 
