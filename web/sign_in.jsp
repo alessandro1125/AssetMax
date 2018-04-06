@@ -384,7 +384,7 @@
                         HashMap<String, Object> map = new HashMap();
                         map.put("email", email);
                         map.put("password", password);
-                        map.put("nome", name);
+                        map.put("name", name);
                         map.put("passkey", passkey);
                         map.put("attivo", "0");
                         map.put("account_id", "0");
