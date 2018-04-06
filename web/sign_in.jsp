@@ -410,7 +410,7 @@
                         //Controllo se l'utente è già registrato
                         if(!searchUser(connection, email)){
 
-                            if(addSql(connection , map, "users")){
+                            if(addSql(connection , map, "assetmaxusers")){
 
                                 //Stampo la risposta
                                 %>
