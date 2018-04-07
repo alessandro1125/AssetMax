@@ -7,12 +7,12 @@
 <html>
     <head>
         <%
-/*
+
             //Controllo se sono autorizzato
             try {
-                if (((String) request.getAttribute("authorization")).equals("authorized")) {
+                if (((String)request.getAttribute("authorization")).equals("authorized")) {
                     //Se non sono autorizzato reindirizzo l'utente alla home
-                    String redirectURL = "/";
+                    String redirectURL = "assetmax.herokuapp.com";
                     response.sendRedirect(redirectURL);
                 }
             }catch (Exception e){
@@ -21,7 +21,7 @@
                 String redirectURL = "/";
                 response.sendRedirect(redirectURL);
             }
-*/
+
             String time = GregorianCalendar.getInstance().getTime().toString();
         %>
         <title>Account Manager</title>
