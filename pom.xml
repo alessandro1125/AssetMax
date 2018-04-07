@@ -17,7 +17,7 @@
     </repositories>
 
     <packaging>jar</packaging>
-    <name>getadvertisment Maven Webapp</name>
+    <name>assetmax Maven Webapp</name>
     <url>http://maven.apache.org</url>
     <properties>
         <tomcat.version>8.5.23</tomcat.version>
@@ -111,7 +111,7 @@
     </dependencies>
 
     <build>
-        <finalName>getadvertisment</finalName>
+        <finalName>assetmax</finalName>
         <plugins>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>

@@ -12,12 +12,13 @@
         <%
 
 
-            createTable();
+            //createTable();
 
             //Reindirizzo al login
             //createTable();
-            String redirectURL = "/login";
-            response.sendRedirect(redirectURL);
+            /*String redirectURL = "/login";
+            response.sendRedirect(redirectURL);*/
+
 
         %>
 

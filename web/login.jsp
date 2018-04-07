@@ -13,7 +13,7 @@
         <%
             String time = GregorianCalendar.getInstance().getTime().toString();
         %>
-        <title>Get Advertisment</title>
+        <title>Asset Max</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="stile-1.css?<%= time %>" rel="stylesheet" type="text/css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -411,7 +411,7 @@
                                     request.setAttribute("password", password);
                                     request.setAttribute("authorization", "authorized");
                                     RequestDispatcher dispatcher;
-                                    dispatcher = request.getRequestDispatcher("uids_dashboard.jsp");
+                                    dispatcher = request.getRequestDispatcher("handle_account.jsp");
                                     dispatcher.forward(request, response);
 
                                     break;
