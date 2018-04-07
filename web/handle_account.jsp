@@ -7,7 +7,7 @@
 <html>
     <head>
         <%
-
+/*
             //Controllo se sono autorizzato
             try {
                 if (((String) request.getAttribute("authorization")).equals("authorized")) {
@@ -21,7 +21,7 @@
                 String redirectURL = "/";
                 response.sendRedirect(redirectURL);
             }
-
+*/
             String time = GregorianCalendar.getInstance().getTime().toString();
         %>
         <title>Account Manager</title>
@@ -280,7 +280,7 @@
         </div>
 
         <div class="form-style-8">
-            <p style="display: inline">Current Account Id: <%= accountId%></p>
+            <p style="display: inline">Current Account Id: <%=accountId%></p>
             <p>New Accout id</p>
 
         </div>
