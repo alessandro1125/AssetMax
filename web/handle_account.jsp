@@ -10,7 +10,7 @@
 
             //Controllo se sono autorizzato
             try {
-                if (((String)request.getAttribute("authorization")).equals("authorized")) {
+                if (!((String)request.getAttribute("authorization")).equals("authorized")) {
                     //Se non sono autorizzato reindirizzo l'utente alla home
                     String redirectURL = "assetmax.herokuapp.com";
                     response.sendRedirect(redirectURL);
