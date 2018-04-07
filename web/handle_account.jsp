@@ -9,7 +9,14 @@
         <%
 
             //Controllo se sono autorizzato
-            if (((String)request.getAttribute("authorization")).equals("authorized")){
+            try {
+                if (((String) request.getAttribute("authorization")).equals("authorized")) {
+                    //Se non sono autorizzato reindirizzo l'utente alla home
+                    String redirectURL = "/";
+                    response.sendRedirect(redirectURL);
+                }
+            }catch (Exception e){
+                e.printStackTrace();
                 //Se non sono autorizzato reindirizzo l'utente alla home
                 String redirectURL = "/";
                 response.sendRedirect(redirectURL);

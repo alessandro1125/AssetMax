@@ -411,7 +411,7 @@
                                     request.setAttribute("password", password);
                                     request.setAttribute("authorization", "authorized");
                                     RequestDispatcher dispatcher;
-                                    dispatcher = request.getRequestDispatcher("handle_account.jsp");
+                                    dispatcher = request.getRequestDispatcher("/handle_account.jsp");
                                     dispatcher.forward(request, response);
 
                                     break;
