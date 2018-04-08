@@ -265,7 +265,7 @@
         switch (action){
             case 1:
                 //AGGIORNO L'ACCOUNT ID
-                String account_id = null;
+                String account_id;
                 try {
                     account_id = request.getParameter("new_id");
                 }catch (Exception e){
@@ -273,7 +273,6 @@
                     break;
                 }
                 //Lo inserisco nel DB
-                Connection connection = SqlUtils.getConnectionHeroku();
                 String query = "UPDATE assetmaxusers SET account_id='" + account_id + "' WHERE email='" + email + "'";
                 SqlUtils.sqlUpdate(SqlUtils.getConnectionHeroku(), query);
                 break;
@@ -314,7 +313,7 @@
             <p style="display: inline">Current Account Id: <%=accountId%></p>
             <br>
             <form action="handle_account.jsp?action=1" method="post">
-                <input type="number" name="new_id" placeholder="Enter a new Account ID...">
+                <input type="text" name="new_id" placeholder="Enter a new Account ID...">
                 <input type="submit" value="Update ID">
             </form>
         </div>

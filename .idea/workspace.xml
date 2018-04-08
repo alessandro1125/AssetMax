@@ -117,8 +117,8 @@
       <file leaf-file-name="sign_in.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/sign_in.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="279" column="0" lean-forward="true" selection-start-line="279" selection-start-column="0" selection-end-line="279" selection-end-column="0" />
+            <state relative-caret-position="221">
+              <caret line="412" column="59" lean-forward="false" selection-start-line="412" selection-start-column="59" selection-end-line="412" selection-end-column="59" />
               <folding>
                 <marker date="1523201840937" expanded="true" signature="36640:36732" ph="UPDATE assetmaxusers... " />
                 <marker date="1523201840937" expanded="true" signature="37495:37573" ph="UPDATE assetmaxusers... " />
@@ -162,8 +162,8 @@
       <file leaf-file-name="handle_account.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/handle_account.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="292" column="9" lean-forward="false" selection-start-line="292" selection-start-column="9" selection-end-line="292" selection-end-column="9" />
+            <state relative-caret-position="165">
+              <caret line="274" column="37" lean-forward="false" selection-start-line="274" selection-start-column="37" selection-end-line="274" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -242,7 +242,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-673" />
     <option name="y" value="136" />
     <option name="width" value="1612" />
@@ -521,15 +521,15 @@
       <workItem from="1523005024719" duration="2056000" />
       <workItem from="1523105312129" duration="578000" />
       <workItem from="1523126412088" duration="6877000" />
-      <workItem from="1523199594122" duration="2504000" />
+      <workItem from="1523199594122" duration="2994000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22268000" />
+    <option name="totallyTimeSpent" value="22758000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -979,13 +979,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/4a8cf6c1/8e744472-fe7b-4f31-bfcc-1edcb4ac5b4f/dd6auq15qvb9aa.public.assetmaxusers">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/index_exemple.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="658">
@@ -1010,21 +1003,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/sign_in.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="279" column="0" lean-forward="true" selection-start-line="279" selection-start-column="0" selection-end-line="279" selection-end-column="0" />
-          <folding>
-            <marker date="1523201840937" expanded="true" signature="36640:36732" ph="UPDATE assetmaxusers... " />
-            <marker date="1523201840937" expanded="true" signature="37495:37573" ph="UPDATE assetmaxusers... " />
-            <marker date="1523201840937" expanded="true" signature="38285:38361" ph="UPDATE assetmaxusers... " />
-            <marker date="1523201840937" expanded="true" signature="39196:39256" ph="SELECT passk... assetmaxusers" />
-            <marker date="1523201840937" expanded="true" signature="40455:40486" ph="SELECT email... assetmaxusers" />
-            <marker date="1523201840937" expanded="true" signature="41484:41522" ph="SELECT email... assetmaxusers" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/SqlUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1972">
@@ -1038,10 +1016,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/sign_in.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="412" column="59" lean-forward="false" selection-start-line="412" selection-start-column="59" selection-end-line="412" selection-end-column="59" />
+          <folding>
+            <marker date="1523201840937" expanded="true" signature="36640:36732" ph="UPDATE assetmaxusers... " />
+            <marker date="1523201840937" expanded="true" signature="37495:37573" ph="UPDATE assetmaxusers... " />
+            <marker date="1523201840937" expanded="true" signature="38285:38361" ph="UPDATE assetmaxusers... " />
+            <marker date="1523201840937" expanded="true" signature="39196:39256" ph="SELECT passk... assetmaxusers" />
+            <marker date="1523201840937" expanded="true" signature="40455:40486" ph="SELECT email... assetmaxusers" />
+            <marker date="1523201840937" expanded="true" signature="41484:41522" ph="SELECT email... assetmaxusers" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/4a8cf6c1/8e744472-fe7b-4f31-bfcc-1edcb4ac5b4f/dd6auq15qvb9aa.public.assetmaxusers">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/handle_account.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="292" column="9" lean-forward="false" selection-start-line="292" selection-start-column="9" selection-end-line="292" selection-end-column="9" />
+        <state relative-caret-position="165">
+          <caret line="274" column="37" lean-forward="false" selection-start-line="274" selection-start-column="37" selection-end-line="274" selection-end-column="37" />
           <folding />
         </state>
       </provider>
