@@ -408,12 +408,14 @@
                                     }
 
                                     //Se sono autenticato
-                                    String dispUrl;
+                                    String dispUrl = null;
                                     try {
                                         dispUrl = request.getParameter("from_page");
                                     }catch (Exception e){
-                                        dispUrl = "handle_account.jsp";
+                                        e.printStackTrace();
                                     }
+                                    if (dispUrl == null)
+                                        dispUrl = "hanle_account.jsp";
                                     //Controllo dove devo essere reindirizzato
                                     request.setAttribute("email", email);
                                     request.setAttribute("password", password);
