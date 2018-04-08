@@ -413,7 +413,6 @@
                                     RequestDispatcher dispatcher;
                                     dispatcher = request.getRequestDispatcher("handle_account.jsp");
                                     dispatcher.forward(request, response);
-
                                     break;
 
                                 case 1:
@@ -512,8 +511,8 @@
                             passwordFounded = true;
                         if (emailFounded && passwordFounded && resultSet.getString("attivo").equals("1"))
                             attivato = true;
-                        connection.close();
                     }
+                    connection.close();
                     //Genero output
                     if (!emailFounded)
                         return 1;

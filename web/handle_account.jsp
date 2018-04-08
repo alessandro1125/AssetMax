@@ -245,10 +245,19 @@
     </head>
     <body style="position: absolute; min-width: 1000px; width: 100%">
     <%
+        String email = null;
+        try {
+            email = (String)request.getAttribute("email");
+        }catch (Exception e){
+            e.printStackTrace();
+            //Se non sono autorizzato reindirizzo l'utente alla home
+            String redirectURL = "/";
+            response.sendRedirect(redirectURL);
+        }
         //Ricavo l'account id attuale
         String accountId = "No ID";
         Connection connection = getConnectionHeroku();
-        ResultSet resultSet = sqlRead(connection, "assetmaxusers", null, "email=" + request.getAttribute("email"));
+        ResultSet resultSet = sqlRead(connection, "assetmaxusers", null, "email=" + email);
         //Analizzo il resultSet per trovare l'account ID
         try {
             accountId = resultSet.getString("account_id");

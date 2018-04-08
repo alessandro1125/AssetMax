@@ -141,26 +141,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/login.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5254">
-              <caret line="607" column="51" lean-forward="true" selection-start-line="607" selection-start-column="51" selection-end-line="607" selection-end-column="51" />
+            <state relative-caret-position="437">
+              <caret line="514" column="39" lean-forward="false" selection-start-line="514" selection-start-column="39" selection-end-line="514" selection-end-column="39" />
               <folding>
-                <marker date="1523146087287" expanded="true" signature="18847:18881" ph="SELECT email... users" />
-                <marker date="1523146087287" expanded="true" signature="18847:18894" ph="SELECT email... assetmaxusers" />
-                <marker date="1523146087287" expanded="true" signature="21111:21141" ph="SELECT missi... missingValue" />
-                <marker date="1523146087287" expanded="true" signature="23254:23347" ph="INSERT INTO missingValue... " />
+                <marker date="1523146323412" expanded="true" signature="18846:18880" ph="SELECT email... users" />
+                <marker date="1523146323412" expanded="true" signature="18846:18893" ph="SELECT email... assetmaxusers" />
+                <marker date="1523146323412" expanded="true" signature="21106:21136" ph="SELECT missi... missingValue" />
+                <marker date="1523146323412" expanded="true" signature="23249:23342" ph="INSERT INTO missingValue... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="handle_account.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="handle_account.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/handle_account.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-272">
-              <caret line="14" column="43" lean-forward="false" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+            <state relative-caret-position="307">
+              <caret line="254" column="47" lean-forward="false" selection-start-line="254" selection-start-column="47" selection-end-line="254" selection-end-column="47" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -202,8 +202,8 @@
         <option value="$PROJECT_DIR$/web/index_exemple.jsp" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/8e744472-fe7b-4f31-bfcc-1edcb4ac5b4f/console.sql" />
         <option value="$PROJECT_DIR$/web/sign_in.jsp" />
-        <option value="$PROJECT_DIR$/web/handle_account.jsp" />
         <option value="$PROJECT_DIR$/web/login.jsp" />
+        <option value="$PROJECT_DIR$/web/handle_account.jsp" />
       </list>
     </option>
   </component>
@@ -513,12 +513,12 @@
       <workItem from="1523001367357" duration="2054000" />
       <workItem from="1523005024719" duration="2056000" />
       <workItem from="1523105312129" duration="578000" />
-      <workItem from="1523126412088" duration="5887000" />
+      <workItem from="1523126412088" duration="6386000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18774000" />
+    <option name="totallyTimeSpent" value="19273000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -576,10 +576,10 @@
         <state relative-caret-position="255">
           <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
           <folding>
-            <marker date="1523146087287" expanded="true" signature="18847:18881" ph="SELECT email... users" />
-            <marker date="1523146087287" expanded="true" signature="18847:18894" ph="SELECT email... assetmaxusers" />
-            <marker date="1523146087287" expanded="true" signature="21111:21141" ph="SELECT missi... missingValue" />
-            <marker date="1523146087287" expanded="true" signature="23254:23347" ph="INSERT INTO missingValue... " />
+            <marker date="1523146323412" expanded="true" signature="18846:18880" ph="SELECT email... users" />
+            <marker date="1523146323412" expanded="true" signature="18846:18893" ph="SELECT email... assetmaxusers" />
+            <marker date="1523146323412" expanded="true" signature="21106:21136" ph="SELECT missi... missingValue" />
+            <marker date="1523146323412" expanded="true" signature="23249:23342" ph="INSERT INTO missingValue... " />
           </folding>
         </state>
       </provider>
@@ -642,10 +642,10 @@
         <state relative-caret-position="255">
           <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
           <folding>
-            <marker date="1523146087287" expanded="true" signature="18847:18881" ph="SELECT email... users" />
-            <marker date="1523146087287" expanded="true" signature="18847:18894" ph="SELECT email... assetmaxusers" />
-            <marker date="1523146087287" expanded="true" signature="21111:21141" ph="SELECT missi... missingValue" />
-            <marker date="1523146087287" expanded="true" signature="23254:23347" ph="INSERT INTO missingValue... " />
+            <marker date="1523146323412" expanded="true" signature="18846:18880" ph="SELECT email... users" />
+            <marker date="1523146323412" expanded="true" signature="18846:18893" ph="SELECT email... assetmaxusers" />
+            <marker date="1523146323412" expanded="true" signature="21106:21136" ph="SELECT missi... missingValue" />
+            <marker date="1523146323412" expanded="true" signature="23249:23342" ph="INSERT INTO missingValue... " />
           </folding>
         </state>
       </provider>
@@ -729,10 +729,10 @@
         <state relative-caret-position="8738">
           <caret line="514" column="43" lean-forward="true" selection-start-line="514" selection-start-column="43" selection-end-line="514" selection-end-column="43" />
           <folding>
-            <marker date="1523146087287" expanded="true" signature="18847:18881" ph="SELECT email... users" />
-            <marker date="1523146087287" expanded="true" signature="18847:18894" ph="SELECT email... assetmaxusers" />
-            <marker date="1523146087287" expanded="true" signature="21111:21141" ph="SELECT missi... missingValue" />
-            <marker date="1523146087287" expanded="true" signature="23254:23347" ph="INSERT INTO missingValue... " />
+            <marker date="1523146323412" expanded="true" signature="18846:18880" ph="SELECT email... users" />
+            <marker date="1523146323412" expanded="true" signature="18846:18893" ph="SELECT email... assetmaxusers" />
+            <marker date="1523146323412" expanded="true" signature="21106:21136" ph="SELECT missi... missingValue" />
+            <marker date="1523146323412" expanded="true" signature="23249:23342" ph="INSERT INTO missingValue... " />
           </folding>
         </state>
       </provider>
@@ -828,10 +828,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1523146087287" expanded="true" signature="18847:18881" ph="SELECT email... users" />
-            <marker date="1523146087287" expanded="true" signature="18847:18894" ph="SELECT email... assetmaxusers" />
-            <marker date="1523146087287" expanded="true" signature="21111:21141" ph="SELECT missi... missingValue" />
-            <marker date="1523146087287" expanded="true" signature="23254:23347" ph="INSERT INTO missingValue... " />
+            <marker date="1523146323412" expanded="true" signature="18846:18880" ph="SELECT email... users" />
+            <marker date="1523146323412" expanded="true" signature="18846:18893" ph="SELECT email... assetmaxusers" />
+            <marker date="1523146323412" expanded="true" signature="21106:21136" ph="SELECT missi... missingValue" />
+            <marker date="1523146323412" expanded="true" signature="23249:23342" ph="INSERT INTO missingValue... " />
           </folding>
         </state>
       </provider>
@@ -903,10 +903,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1523146087287" expanded="true" signature="18847:18881" ph="SELECT email... users" />
-            <marker date="1523146087287" expanded="true" signature="18847:18894" ph="SELECT email... assetmaxusers" />
-            <marker date="1523146087287" expanded="true" signature="21111:21141" ph="SELECT missi... missingValue" />
-            <marker date="1523146087287" expanded="true" signature="23254:23347" ph="INSERT INTO missingValue... " />
+            <marker date="1523146323412" expanded="true" signature="18846:18880" ph="SELECT email... users" />
+            <marker date="1523146323412" expanded="true" signature="18846:18893" ph="SELECT email... assetmaxusers" />
+            <marker date="1523146323412" expanded="true" signature="21106:21136" ph="SELECT missi... missingValue" />
+            <marker date="1523146323412" expanded="true" signature="23249:23342" ph="INSERT INTO missingValue... " />
           </folding>
         </state>
       </provider>
@@ -1097,19 +1097,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/handle_account.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-272">
-          <caret line="14" column="43" lean-forward="false" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/4a8cf6c1/8e744472-fe7b-4f31-bfcc-1edcb4ac5b4f/dd6auq15qvb9aa.public.assetmaxusers">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1119,13 +1106,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5254">
-          <caret line="607" column="51" lean-forward="true" selection-start-line="607" selection-start-column="51" selection-end-line="607" selection-end-column="51" />
+        <state relative-caret-position="437">
+          <caret line="514" column="39" lean-forward="false" selection-start-line="514" selection-start-column="39" selection-end-line="514" selection-end-column="39" />
           <folding>
-            <marker date="1523146087287" expanded="true" signature="18847:18881" ph="SELECT email... users" />
-            <marker date="1523146087287" expanded="true" signature="18847:18894" ph="SELECT email... assetmaxusers" />
-            <marker date="1523146087287" expanded="true" signature="21111:21141" ph="SELECT missi... missingValue" />
-            <marker date="1523146087287" expanded="true" signature="23254:23347" ph="INSERT INTO missingValue... " />
+            <marker date="1523146323412" expanded="true" signature="18846:18880" ph="SELECT email... users" />
+            <marker date="1523146323412" expanded="true" signature="18846:18893" ph="SELECT email... assetmaxusers" />
+            <marker date="1523146323412" expanded="true" signature="21106:21136" ph="SELECT missi... missingValue" />
+            <marker date="1523146323412" expanded="true" signature="23249:23342" ph="INSERT INTO missingValue... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/handle_account.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="254" column="47" lean-forward="false" selection-start-line="254" selection-start-column="47" selection-end-line="254" selection-end-column="47" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
