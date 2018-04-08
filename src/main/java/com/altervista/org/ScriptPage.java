@@ -79,8 +79,15 @@ public class ScriptPage extends HttpServlet {
                     String accountName = request.getParameter("name_account");
                     String accessTime = request.getParameter("current_time");
 
+                    try {
+                        assert out != null;
+                        out.write("versione confermata".getBytes());
+                    }catch (IOException e){
+                        e.printStackTrace();
+                    }
+
                     //Controllo la corrispondenza
-                    ResultSet resultCount = SqlUtils.sqlSelect(SqlUtils.getConnectionHeroku(), "assetmaxusers",
+                    ResultSet resultCount = SqlUtils.sqlSelectCount(SqlUtils.getConnectionHeroku(), "assetmaxusers",
                             null,"account_id='" + accountId + "'");
                     try {
                         assert resultCount != null;
