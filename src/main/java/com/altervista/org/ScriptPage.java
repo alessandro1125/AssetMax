@@ -84,7 +84,8 @@ public class ScriptPage extends HttpServlet {
                             null,"account_id='" + accountId + "'");
                     try {
                         assert result != null;
-                        if(result.getString("total").equals("1")){
+                        result.last();
+                        if(result.getRow() == 1){
                             try {
                                 assert out != null;
                                 out.write("0".getBytes());
@@ -93,7 +94,6 @@ public class ScriptPage extends HttpServlet {
                             }
                         }else {
                             try {
-                                result.next();
                                 if (result.getString("active").equals("1")){
                                     //Autenticato
                                     try {
@@ -106,7 +106,8 @@ public class ScriptPage extends HttpServlet {
                                                 "assetmaxuseractives", null, "account_id='" +
                                                 accountId + "'");
                                         assert accesResult != null;
-                                        if (accesResult.getString("total").equals("1")){
+                                        accesResult.last();
+                                        if (accesResult.getRow() != 1){
                                             //Creo un nuovo record
                                             HashMap<String, String> records = new HashMap<>();
                                             records.put("account_id", accountId);
