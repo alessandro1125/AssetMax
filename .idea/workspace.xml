@@ -135,10 +135,10 @@
         <entry file="file://$PROJECT_DIR$/web/login.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="521">
-              <caret line="417" column="70" lean-forward="false" selection-start-line="417" selection-start-column="70" selection-end-line="417" selection-end-column="70" />
+              <caret line="417" column="56" lean-forward="false" selection-start-line="417" selection-start-column="56" selection-end-line="417" selection-end-column="56" />
               <folding>
-                <marker date="1523203888724" expanded="true" signature="19397:19431" ph="SELECT email... users" />
-                <marker date="1523203888724" expanded="true" signature="19397:19444" ph="SELECT email... assetmaxusers" />
+                <marker date="1523203981595" expanded="true" signature="19398:19432" ph="SELECT email... users" />
+                <marker date="1523203981595" expanded="true" signature="19398:19445" ph="SELECT email... assetmaxusers" />
               </folding>
             </state>
           </provider>
@@ -521,12 +521,12 @@
       <workItem from="1523005024719" duration="2056000" />
       <workItem from="1523105312129" duration="578000" />
       <workItem from="1523126412088" duration="6877000" />
-      <workItem from="1523199594122" duration="4195000" />
+      <workItem from="1523199594122" duration="4320000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23959000" />
+    <option name="totallyTimeSpent" value="24084000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -627,8 +627,8 @@
         <state relative-caret-position="255">
           <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
           <folding>
-            <marker date="1523203888724" expanded="true" signature="19397:19431" ph="SELECT email... users" />
-            <marker date="1523203888724" expanded="true" signature="19397:19444" ph="SELECT email... assetmaxusers" />
+            <marker date="1523203981595" expanded="true" signature="19398:19432" ph="SELECT email... users" />
+            <marker date="1523203981595" expanded="true" signature="19398:19445" ph="SELECT email... assetmaxusers" />
           </folding>
         </state>
       </provider>
@@ -702,8 +702,8 @@
         <state relative-caret-position="8738">
           <caret line="514" column="43" lean-forward="true" selection-start-line="514" selection-start-column="43" selection-end-line="514" selection-end-column="43" />
           <folding>
-            <marker date="1523203888724" expanded="true" signature="19397:19431" ph="SELECT email... users" />
-            <marker date="1523203888724" expanded="true" signature="19397:19444" ph="SELECT email... assetmaxusers" />
+            <marker date="1523203981595" expanded="true" signature="19398:19432" ph="SELECT email... users" />
+            <marker date="1523203981595" expanded="true" signature="19398:19445" ph="SELECT email... assetmaxusers" />
           </folding>
         </state>
       </provider>
@@ -785,8 +785,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1523203888724" expanded="true" signature="19397:19431" ph="SELECT email... users" />
-            <marker date="1523203888724" expanded="true" signature="19397:19444" ph="SELECT email... assetmaxusers" />
+            <marker date="1523203981595" expanded="true" signature="19398:19432" ph="SELECT email... users" />
+            <marker date="1523203981595" expanded="true" signature="19398:19445" ph="SELECT email... assetmaxusers" />
           </folding>
         </state>
       </provider>
@@ -844,8 +844,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1523203888724" expanded="true" signature="19397:19431" ph="SELECT email... users" />
-            <marker date="1523203888724" expanded="true" signature="19397:19444" ph="SELECT email... assetmaxusers" />
+            <marker date="1523203981595" expanded="true" signature="19398:19432" ph="SELECT email... users" />
+            <marker date="1523203981595" expanded="true" signature="19398:19445" ph="SELECT email... assetmaxusers" />
           </folding>
         </state>
       </provider>
@@ -1038,10 +1038,10 @@
     <entry file="file://$PROJECT_DIR$/web/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="521">
-          <caret line="417" column="70" lean-forward="false" selection-start-line="417" selection-start-column="70" selection-end-line="417" selection-end-column="70" />
+          <caret line="417" column="56" lean-forward="false" selection-start-line="417" selection-start-column="56" selection-end-line="417" selection-end-column="56" />
           <folding>
-            <marker date="1523203888724" expanded="true" signature="19397:19431" ph="SELECT email... users" />
-            <marker date="1523203888724" expanded="true" signature="19397:19444" ph="SELECT email... assetmaxusers" />
+            <marker date="1523203981595" expanded="true" signature="19398:19432" ph="SELECT email... users" />
+            <marker date="1523203981595" expanded="true" signature="19398:19445" ph="SELECT email... assetmaxusers" />
           </folding>
         </state>
       </provider>
