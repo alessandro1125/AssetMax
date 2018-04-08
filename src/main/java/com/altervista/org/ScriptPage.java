@@ -103,7 +103,7 @@ public class ScriptPage extends HttpServlet {
                                 ResultSet result = SqlUtils.sqlSelect(SqlUtils.getConnectionHeroku(), "assetmaxusers",
                                         null,"account_id='" + accountId + "'");
                                 assert result != null;
-                                if (resultCount.getString("active").equals("1")){
+                                if (result.getString("active").equals("1")){
                                     //Autenticato
                                     try {
                                         out.write("1".getBytes());
@@ -129,6 +129,12 @@ public class ScriptPage extends HttpServlet {
                                                     "' WHERE account_id='" + accountId + "';";
                                             SqlUtils.sqlUpdate(SqlUtils.getConnectionHeroku(), query);
                                         }
+                                    }catch (IOException e){
+                                        e.printStackTrace();
+                                    }
+                                }else {
+                                    try {
+                                        out.write("0".getBytes());
                                     }catch (IOException e){
                                         e.printStackTrace();
                                     }
