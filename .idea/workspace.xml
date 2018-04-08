@@ -141,11 +141,11 @@
       <file leaf-file-name="ScriptPage.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/ScriptPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1338">
-              <caret line="152" column="17" lean-forward="false" selection-start-line="152" selection-start-column="17" selection-end-line="152" selection-end-column="17" />
+            <state relative-caret-position="369">
+              <caret line="92" column="43" lean-forward="false" selection-start-line="92" selection-start-column="43" selection-end-line="92" selection-end-column="43" />
               <folding>
-                <element signature="e#7223#7224#0" expanded="true" />
-                <element signature="e#7254#7255#0" expanded="true" />
+                <element signature="e#7267#7268#0" expanded="true" />
+                <element signature="e#7298#7299#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -200,8 +200,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/altervista/org/Home.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/8e744472-fe7b-4f31-bfcc-1edcb4ac5b4f/console.sql" />
         <option value="$PROJECT_DIR$/web/handle_account.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/altervista/org/ScriptPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/SqlUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/altervista/org/ScriptPage.java" />
       </list>
     </option>
   </component>
@@ -522,12 +522,12 @@
       <workItem from="1523126412088" duration="6877000" />
       <workItem from="1523199594122" duration="6386000" />
       <workItem from="1523209385711" duration="2250000" />
-      <workItem from="1523212873736" duration="3287000" />
+      <workItem from="1523212873736" duration="3500000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31687000" />
+    <option name="totallyTimeSpent" value="31900000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1021,11 +1021,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/ScriptPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1338">
-          <caret line="152" column="17" lean-forward="false" selection-start-line="152" selection-start-column="17" selection-end-line="152" selection-end-column="17" />
+        <state relative-caret-position="369">
+          <caret line="92" column="43" lean-forward="false" selection-start-line="92" selection-start-column="43" selection-end-line="92" selection-end-column="43" />
           <folding>
-            <element signature="e#7223#7224#0" expanded="true" />
-            <element signature="e#7254#7255#0" expanded="true" />
+            <element signature="e#7267#7268#0" expanded="true" />
+            <element signature="e#7298#7299#0" expanded="true" />
           </folding>
         </state>
       </provider>
