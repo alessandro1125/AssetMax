@@ -105,12 +105,12 @@ public class ScriptPage extends HttpServlet {
 
                                         //Registro l'accesso
                                         //Controllo se è già presente un record per questo utente
-                                        ResultSet accesResult = SqlUtils.sqlSelect(SqlUtils.getConnectionHeroku(),
+                                        ResultSet accesResult = SqlUtils.sqlSelectCount(SqlUtils.getConnectionHeroku(),
                                                 "assetmaxuseractives", null, "account_id='" +
                                                 accountId + "'");
                                         assert accesResult != null;
-                                        accesResult.last();
-                                        if (accesResult.getRow() != 1){
+                                        accesResult.next();
+                                        if (resultCount.getInt("total") != 1){
                                             //Creo un nuovo record
                                             HashMap<String, String> records = new HashMap<>();
                                             records.put("account_id", accountId);
