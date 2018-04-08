@@ -80,12 +80,12 @@ public class ScriptPage extends HttpServlet {
                     String accessTime = request.getParameter("current_time");
 
                     //Controllo la corrispondenza
-                    ResultSet result = SqlUtils.sqlSelect(SqlUtils.getConnectionHeroku(), "assetmaxusers",
+                    ResultSet resultCount = SqlUtils.sqlSelect(SqlUtils.getConnectionHeroku(), "assetmaxusers",
                             null,"account_id='" + accountId + "'");
                     try {
-                        assert result != null;
-                        result.last();
-                        if(result.getRow() == 1){
+                        assert resultCount != null;
+                        resultCount.next();
+                        if(resultCount.getInt("total") != 1){
                             try {
                                 assert out != null;
                                 out.write("0".getBytes());
@@ -94,6 +94,11 @@ public class ScriptPage extends HttpServlet {
                             }
                         }else {
                             try {
+                                //Vedo se è stato attivato
+                                ResultSet result = SqlUtils.sqlSelect(SqlUtils.getConnectionHeroku(), "assetmaxusers",
+                                        null,"account_id='" + accountId + "'");
+                                assert result != null;
+                                result.next();
                                 if (result.getString("active").equals("1")){
                                     //Autenticato
                                     try {

@@ -111,6 +111,61 @@ public class SqlUtils {
     /**
      *
      * @param connection Connection
+     * @param table String
+     * @param columns ArrayList<Stirng, String>
+     * @param params String
+     * @return ResultSet
+     */
+    public static ResultSet sqlSelectCount(Connection connection, String table,
+                                      ArrayList<String> columns, String params){
+
+        //Faccio una chiamata al db
+        Statement statement;
+        String query;
+
+        //Build the query
+        StringBuilder builder = new StringBuilder();
+        builder.append("SELECT COUNT(");
+        if(columns != null) {
+            for (int i = 0; i < columns.size(); i++) {
+                builder.append(columns.get(i));
+                if (i != columns.size() - 1)
+                    builder.append(",");
+            }
+        }else {
+            builder.append("*");
+        }
+        builder.append(") FROM ");
+        builder.append(table);
+        builder.append(" WHERE ");
+        builder.append(params);
+        builder.append(";");
+        query = builder.toString();
+
+        try{
+            statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+            connection.close();
+            if (resultSet != null){
+                return resultSet;
+            }else {
+                return null;
+            }
+        }catch (Exception sqle){
+            System.out.println(sqle.toString());
+            sqle.printStackTrace();
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+    }
+
+    /**
+     *
+     * @param connection Connection
      * @param query Stirng
      */
     public static void sqlUpdate(Connection connection, String query){
