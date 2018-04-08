@@ -15,7 +15,7 @@ import java.sql.SQLException;
 import java.util.HashMap;
 
 @WebServlet(
-        name = "LoginServlet",
+        name = "ScriptPageServlet",
         urlPatterns = {"/script_page/*"}
 )
 public class ScriptPage extends HttpServlet {
@@ -151,13 +151,13 @@ public class ScriptPage extends HttpServlet {
                 e.printStackTrace();
             }
         }else {
-            /*
+
             String redirectURL = "/home";
             try {
                 response.sendRedirect(redirectURL);
             } catch (IOException e) {
                 e.printStackTrace();
-            }*/
+            }
         }
     }
 
