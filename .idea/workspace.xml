@@ -144,8 +144,8 @@
       <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/login.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="557">
-              <caret line="514" column="39" lean-forward="false" selection-start-line="514" selection-start-column="39" selection-end-line="514" selection-end-column="39" />
+            <state relative-caret-position="404">
+              <caret line="505" column="43" lean-forward="false" selection-start-line="505" selection-start-column="27" selection-end-line="505" selection-end-column="43" />
               <folding>
                 <marker date="1523146323412" expanded="true" signature="18846:18880" ph="SELECT email... users" />
                 <marker date="1523146323412" expanded="true" signature="18846:18893" ph="SELECT email... assetmaxusers" />
@@ -159,8 +159,8 @@
       <file leaf-file-name="handle_account.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/handle_account.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="259" column="95" lean-forward="false" selection-start-line="259" selection-start-column="95" selection-end-line="259" selection-end-column="95" />
+            <state relative-caret-position="392">
+              <caret line="262" column="29" lean-forward="false" selection-start-line="262" selection-start-column="29" selection-end-line="262" selection-end-column="29" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -513,12 +513,12 @@
       <workItem from="1523001367357" duration="2054000" />
       <workItem from="1523005024719" duration="2056000" />
       <workItem from="1523105312129" duration="578000" />
-      <workItem from="1523126412088" duration="6675000" />
+      <workItem from="1523126412088" duration="6801000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19562000" />
+    <option name="totallyTimeSpent" value="19688000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -995,31 +995,6 @@
       </provider>
     </entry>
     <entry file="das://table:/10c254e2/8e744472-fe7b-4f31-bfcc-1edcb4ac5b4f/dd6auq15qvb9aa.public.assetmaxuseractives" />
-    <entry file="file://$PROJECT_DIR$/web/sign_in.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18632">
-          <caret line="1096" column="11" lean-forward="false" selection-start-line="1096" selection-start-column="11" selection-end-line="1096" selection-end-column="11" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#2;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#3;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#4;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#2;n#form#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1523144912873" expanded="true" signature="36550:36642" ph="UPDATE assetmaxusers... " />
-            <marker date="1523144912873" expanded="true" signature="37405:37483" ph="UPDATE assetmaxusers... " />
-            <marker date="1523144912873" expanded="true" signature="39215:39308" ph="INSERT INTO missingValue... " />
-            <marker date="1523144912873" expanded="true" signature="40020:40096" ph="UPDATE assetmaxusers... " />
-            <marker date="1523144912873" expanded="true" signature="40931:40991" ph="SELECT passk... assetmaxusers" />
-            <marker date="1523144912873" expanded="true" signature="42190:42221" ph="SELECT email... assetmaxusers" />
-            <marker date="1523144912873" expanded="true" signature="43219:43257" ph="SELECT email... assetmaxusers" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2159">
@@ -1104,10 +1079,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/sign_in.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18632">
+          <caret line="1096" column="11" lean-forward="false" selection-start-line="1096" selection-start-column="11" selection-end-line="1096" selection-end-column="11" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#2;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#3;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#4;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#2;n#form#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1523144912873" expanded="true" signature="36550:36642" ph="UPDATE assetmaxusers... " />
+            <marker date="1523144912873" expanded="true" signature="37405:37483" ph="UPDATE assetmaxusers... " />
+            <marker date="1523144912873" expanded="true" signature="39215:39308" ph="INSERT INTO missingValue... " />
+            <marker date="1523144912873" expanded="true" signature="40020:40096" ph="UPDATE assetmaxusers... " />
+            <marker date="1523144912873" expanded="true" signature="40931:40991" ph="SELECT passk... assetmaxusers" />
+            <marker date="1523144912873" expanded="true" signature="42190:42221" ph="SELECT email... assetmaxusers" />
+            <marker date="1523144912873" expanded="true" signature="43219:43257" ph="SELECT email... assetmaxusers" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="514" column="39" lean-forward="false" selection-start-line="514" selection-start-column="39" selection-end-line="514" selection-end-column="39" />
+        <state relative-caret-position="404">
+          <caret line="505" column="43" lean-forward="false" selection-start-line="505" selection-start-column="27" selection-end-line="505" selection-end-column="43" />
           <folding>
             <marker date="1523146323412" expanded="true" signature="18846:18880" ph="SELECT email... users" />
             <marker date="1523146323412" expanded="true" signature="18846:18893" ph="SELECT email... assetmaxusers" />
@@ -1119,8 +1119,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/handle_account.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="259" column="95" lean-forward="false" selection-start-line="259" selection-start-column="95" selection-end-line="259" selection-end-column="95" />
+        <state relative-caret-position="392">
+          <caret line="262" column="29" lean-forward="false" selection-start-line="262" selection-start-column="29" selection-end-line="262" selection-end-column="29" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />

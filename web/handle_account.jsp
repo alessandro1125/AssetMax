@@ -260,6 +260,7 @@
         ResultSet resultSet = sqlRead(connection, "assetmaxusers", null, "email='" + email + "'");
         //Analizzo il resultSet per trovare l'account ID
         try {
+            resultSet.next();
             accountId = resultSet.getString("account_id");
         }catch (SQLException e){
             e.printStackTrace();
