@@ -134,8 +134,8 @@
       <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/login.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
-              <caret line="417" column="56" lean-forward="false" selection-start-line="417" selection-start-column="56" selection-end-line="417" selection-end-column="56" />
+            <state relative-caret-position="436">
+              <caret line="325" column="42" lean-forward="false" selection-start-line="325" selection-start-column="36" selection-end-line="325" selection-end-column="42" />
               <folding>
                 <marker date="1523203981595" expanded="true" signature="19398:19432" ph="SELECT email... users" />
                 <marker date="1523203981595" expanded="true" signature="19398:19445" ph="SELECT email... assetmaxusers" />
@@ -162,9 +162,18 @@
       <file leaf-file-name="handle_account.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/handle_account.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="314" column="69" lean-forward="false" selection-start-line="314" selection-start-column="69" selection-end-line="314" selection-end-column="69" />
+            <state relative-caret-position="318">
+              <caret line="252" column="73" lean-forward="false" selection-start-line="252" selection-start-column="73" selection-end-line="252" selection-end-column="73" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="assetmaxusers" pinned="false" current-in-tab="false">
+        <entry file="das://table:/4a8cf6c1/8e744472-fe7b-4f31-bfcc-1edcb4ac5b4f/dd6auq15qvb9aa.public.assetmaxusers">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -521,12 +530,12 @@
       <workItem from="1523005024719" duration="2056000" />
       <workItem from="1523105312129" duration="578000" />
       <workItem from="1523126412088" duration="6877000" />
-      <workItem from="1523199594122" duration="4478000" />
+      <workItem from="1523199594122" duration="4869000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24242000" />
+    <option name="totallyTimeSpent" value="24633000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1005,6 +1014,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://table:/4a8cf6c1/8e744472-fe7b-4f31-bfcc-1edcb4ac5b4f/dd6auq15qvb9aa.public.assetmaxusers">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/sign_in.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1020,17 +1036,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/4a8cf6c1/8e744472-fe7b-4f31-bfcc-1edcb4ac5b4f/dd6auq15qvb9aa.public.assetmaxusers">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="417" column="56" lean-forward="false" selection-start-line="417" selection-start-column="56" selection-end-line="417" selection-end-column="56" />
+        <state relative-caret-position="436">
+          <caret line="325" column="42" lean-forward="false" selection-start-line="325" selection-start-column="36" selection-end-line="325" selection-end-column="42" />
           <folding>
             <marker date="1523203981595" expanded="true" signature="19398:19432" ph="SELECT email... users" />
             <marker date="1523203981595" expanded="true" signature="19398:19445" ph="SELECT email... assetmaxusers" />
@@ -1040,8 +1049,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/handle_account.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="314" column="69" lean-forward="false" selection-start-line="314" selection-start-column="69" selection-end-line="314" selection-end-column="69" />
+        <state relative-caret-position="318">
+          <caret line="252" column="73" lean-forward="false" selection-start-line="252" selection-start-column="73" selection-end-line="252" selection-end-column="73" />
           <folding />
         </state>
       </provider>

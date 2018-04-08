@@ -250,7 +250,7 @@
         //Ricavo l'eventuale action
         int action = 0;
         try {
-            action = Integer.parseInt(request.getParameter("action"));
+            action = Integer.parseInt(request.getParameter("handle_action"));
         }catch (Exception e){}
         //Ricavo l'eventuale email
         String email = null;
@@ -262,6 +262,7 @@
             String redirectURL = "/";
             response.sendRedirect(redirectURL);
         }
+
         switch (action){
             case 1:
                 //AGGIORNO L'ACCOUNT ID
@@ -312,7 +313,7 @@
         <div class="form-style-8">
             <p style="display: inline">Current Account Id: <%=accountId%></p>
             <br>
-            <form action="login?from_page=handle_account.jsp?action=1" method="post">
+            <form action="login?from_page=handle_account.jsp?handle_action=1" method="post">
                 <input type="text" name="new_id" placeholder="Enter a new Account ID...">
                 <input type="submit" value="Update ID">
             </form>
