@@ -340,7 +340,7 @@
             builder.append(params);
 
             query = builder.toString();
-
+            System.out.println(query);
             try{
                 statement = connection.createStatement();
                 ResultSet resultSet = statement.executeQuery(query);
