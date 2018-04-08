@@ -131,7 +131,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/login.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="521">
@@ -159,11 +159,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="handle_account.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="handle_account.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/handle_account.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="522">
-              <caret line="314" column="59" lean-forward="true" selection-start-line="314" selection-start-column="59" selection-end-line="314" selection-end-column="59" />
+              <caret line="314" column="69" lean-forward="false" selection-start-line="314" selection-start-column="69" selection-end-line="314" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -201,8 +201,8 @@
         <option value="$PROJECT_DIR$/web/index_exemple.jsp" />
         <option value="$PROJECT_DIR$/web/sign_in.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/utils/SqlUtils.java" />
-        <option value="$PROJECT_DIR$/web/handle_account.jsp" />
         <option value="$PROJECT_DIR$/web/login.jsp" />
+        <option value="$PROJECT_DIR$/web/handle_account.jsp" />
       </list>
     </option>
   </component>
@@ -521,12 +521,12 @@
       <workItem from="1523005024719" duration="2056000" />
       <workItem from="1523105312129" duration="578000" />
       <workItem from="1523126412088" duration="6877000" />
-      <workItem from="1523199594122" duration="4320000" />
+      <workItem from="1523199594122" duration="4478000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24084000" />
+    <option name="totallyTimeSpent" value="24242000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1027,14 +1027,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/handle_account.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="314" column="59" lean-forward="true" selection-start-line="314" selection-start-column="59" selection-end-line="314" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="521">
@@ -1043,6 +1035,14 @@
             <marker date="1523203981595" expanded="true" signature="19398:19432" ph="SELECT email... users" />
             <marker date="1523203981595" expanded="true" signature="19398:19445" ph="SELECT email... assetmaxusers" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/handle_account.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="314" column="69" lean-forward="false" selection-start-line="314" selection-start-column="69" selection-end-line="314" selection-end-column="69" />
+          <folding />
         </state>
       </provider>
     </entry>
