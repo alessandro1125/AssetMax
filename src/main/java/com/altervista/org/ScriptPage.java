@@ -110,7 +110,7 @@ public class ScriptPage extends HttpServlet {
                                                 accountId + "'");
                                         assert accesResult != null;
                                         accesResult.next();
-                                        if (resultCount.getInt("total") != 1){
+                                        if (accesResult.getInt("total") != 1){
                                             //Creo un nuovo record
                                             HashMap<String, String> records = new HashMap<>();
                                             records.put("account_id", accountId);
