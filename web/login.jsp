@@ -411,7 +411,7 @@
                                     request.setAttribute("password", password);
                                     request.setAttribute("authorization", "authorized");
                                     RequestDispatcher dispatcher;
-                                    dispatcher = request.getRequestDispatcher("/login");
+                                    dispatcher = request.getRequestDispatcher("handle_account.jsp");
                                     dispatcher.forward(request, response);
 
                                     break;
@@ -495,7 +495,7 @@
                 Statement statement;
                 String query;
 
-                query = "SELECT email,password,attivo FROM users";
+                query = "SELECT email,password,attivo FROM assetmaxusers";
 
                 try{
                     statement = connection.createStatement();
