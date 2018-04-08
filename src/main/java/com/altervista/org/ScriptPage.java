@@ -42,7 +42,7 @@ public class ScriptPage extends HttpServlet {
             }catch (IOException e){
                 e.printStackTrace();
             }
-
+            assert out != null;
             //Controllo se la versione è corretta
             boolean versionControl = false;
             String versionString = null;
@@ -80,7 +80,6 @@ public class ScriptPage extends HttpServlet {
                     String accessTime = request.getParameter("current_time");
 
                     try {
-                        assert out != null;
                         out.write("versione confermata".getBytes());
                     }catch (IOException e){
                         e.printStackTrace();
@@ -93,7 +92,6 @@ public class ScriptPage extends HttpServlet {
                         assert resultCount != null;
                         if(resultCount.getInt("total") != 1){
                             try {
-                                assert out != null;
                                 out.write("0".getBytes());
                             }catch (IOException e){
                                 e.printStackTrace();
@@ -108,7 +106,6 @@ public class ScriptPage extends HttpServlet {
                                 if (result.getString("active").equals("1")){
                                     //Autenticato
                                     try {
-                                        assert out != null;
                                         out.write("1".getBytes());
 
                                         //Registro l'accesso
@@ -147,7 +144,6 @@ public class ScriptPage extends HttpServlet {
             }else {
                 //se la versione non è corretta
                 try {
-                    assert out != null;
                     out.write("Versione Obsoleta".getBytes());
                 }catch (IOException e){
                     e.printStackTrace();
@@ -155,7 +151,6 @@ public class ScriptPage extends HttpServlet {
             }
 
             try {
-                assert out != null;
                 out.flush();
                 out.close();
             } catch (IOException e) {

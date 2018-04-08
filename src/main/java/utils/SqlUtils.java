@@ -135,7 +135,7 @@ public class SqlUtils {
         }else {
             builder.append("*");
         }
-        builder.append(") FROM ");
+        builder.append(") AS total FROM ");
         builder.append(table);
         builder.append(" WHERE ");
         builder.append(params);
