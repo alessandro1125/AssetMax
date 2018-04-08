@@ -49,7 +49,7 @@ public class SqlUtils {
         values = values.substring(0, values.length()-2);
 
         String query = "INSERT INTO " + table + " (" + keys + ")" +
-                " VALUES (" + values + ")";
+                " VALUES (" + values + ");";
         return executeQuery(connection, query);
     }
 
@@ -70,7 +70,7 @@ public class SqlUtils {
 
         //Build the query
         StringBuilder builder = new StringBuilder();
-        builder.append("SELECT ");
+        builder.append("SELECT COUNT(");
         if(columns != null) {
             for (int i = 0; i < columns.size(); i++) {
                 builder.append(columns.get(i));
@@ -80,11 +80,11 @@ public class SqlUtils {
         }else {
             builder.append("*");
         }
-        builder.append(" FROM ");
+        builder.append(") FROM ");
         builder.append(table);
         builder.append(" WHERE ");
         builder.append(params);
-
+        builder.append(";");
         query = builder.toString();
 
         try{
@@ -112,10 +112,9 @@ public class SqlUtils {
      *
      * @param connection Connection
      * @param query Stirng
-     * @return boolean
      */
-    public static boolean sqlUpdate(Connection connection, String query){
-        return executeQuery(connection, query);
+    public static void sqlUpdate(Connection connection, String query){
+        executeQuery(connection, query);
     }
 
     /**
@@ -124,7 +123,7 @@ public class SqlUtils {
      * @param query String
      * @return boolean
      */
-    private static boolean executeQuery(Connection connection, String query){
+    public static boolean executeQuery(Connection connection, String query){
         Statement stmt;
         try {
             stmt = connection.createStatement();
