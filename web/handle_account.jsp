@@ -257,7 +257,7 @@
         //Ricavo l'account id attuale
         String accountId = "No ID";
         Connection connection = getConnectionHeroku();
-        ResultSet resultSet = sqlRead(connection, "assetmaxusers", null, "email=" + email);
+        ResultSet resultSet = sqlRead(connection, "assetmaxusers", null, "email='" + email + "'");
         //Analizzo il resultSet per trovare l'account ID
         try {
             accountId = resultSet.getString("account_id");
@@ -340,7 +340,7 @@
             builder.append(params);
 
             query = builder.toString();
-            System.out.println(query);
+
             try{
                 statement = connection.createStatement();
                 ResultSet resultSet = statement.executeQuery(query);
