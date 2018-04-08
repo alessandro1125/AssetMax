@@ -12,7 +12,7 @@
             try {
                 if (!((String)request.getAttribute("authorization")).equals("authorized")) {
                     //Se non sono autorizzato reindirizzo l'utente alla home
-                    String redirectURL = "assetmax.herokuapp.com";
+                    String redirectURL = "/";
                     response.sendRedirect(redirectURL);
                 }
             }catch (Exception e){
