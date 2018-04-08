@@ -93,7 +93,7 @@ public class ScriptPage extends HttpServlet {
                         resultCount.next();
                         if(resultCount.getInt("total") != 1){
                             try {
-                                out.write(("0" + resultCount.getInt("total")).getBytes());
+                                out.write("0".getBytes());
                             }catch (IOException e){
                                 e.printStackTrace();
                             }
@@ -103,8 +103,7 @@ public class ScriptPage extends HttpServlet {
                                 ResultSet result = SqlUtils.sqlSelect(SqlUtils.getConnectionHeroku(), "assetmaxusers",
                                         null,"account_id='" + accountId + "'");
                                 assert result != null;
-                                result.next();
-                                if (result.getString("active").equals("1")){
+                                if (resultCount.getString("active").equals("1")){
                                     //Autenticato
                                     try {
                                         out.write("1".getBytes());
