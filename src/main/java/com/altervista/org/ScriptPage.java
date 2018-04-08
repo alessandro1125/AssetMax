@@ -151,12 +151,13 @@ public class ScriptPage extends HttpServlet {
                 e.printStackTrace();
             }
         }else {
+            /*
             String redirectURL = "/home";
             try {
                 response.sendRedirect(redirectURL);
             } catch (IOException e) {
                 e.printStackTrace();
-            }
+            }*/
         }
     }
 
