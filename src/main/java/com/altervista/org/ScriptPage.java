@@ -93,7 +93,7 @@ public class ScriptPage extends HttpServlet {
                         resultCount.next();
                         if(resultCount.getInt("total") != 1){
                             try {
-                                out.write("0".getBytes());
+                                out.write(("0" + resultCount.getInt("total")).getBytes());
                             }catch (IOException e){
                                 e.printStackTrace();
                             }
