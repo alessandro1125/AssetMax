@@ -141,11 +141,11 @@
       <file leaf-file-name="ScriptPage.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/ScriptPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="89" column="68" lean-forward="false" selection-start-line="89" selection-start-column="68" selection-end-line="89" selection-end-column="68" />
+            <state relative-caret-position="408">
+              <caret line="92" column="51" lean-forward="false" selection-start-line="92" selection-start-column="51" selection-end-line="92" selection-end-column="51" />
               <folding>
-                <element signature="e#7468#7469#0" expanded="true" />
-                <element signature="e#7499#7500#0" expanded="true" />
+                <element signature="e#7424#7425#0" expanded="true" />
+                <element signature="e#7455#7456#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -522,12 +522,12 @@
       <workItem from="1523126412088" duration="6877000" />
       <workItem from="1523199594122" duration="6386000" />
       <workItem from="1523209385711" duration="2250000" />
-      <workItem from="1523212873736" duration="2560000" />
+      <workItem from="1523212873736" duration="2897000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30960000" />
+    <option name="totallyTimeSpent" value="31297000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1021,11 +1021,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/ScriptPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="89" column="68" lean-forward="false" selection-start-line="89" selection-start-column="68" selection-end-line="89" selection-end-column="68" />
+        <state relative-caret-position="408">
+          <caret line="92" column="51" lean-forward="false" selection-start-line="92" selection-start-column="51" selection-end-line="92" selection-end-column="51" />
           <folding>
-            <element signature="e#7468#7469#0" expanded="true" />
-            <element signature="e#7499#7500#0" expanded="true" />
+            <element signature="e#7424#7425#0" expanded="true" />
+            <element signature="e#7455#7456#0" expanded="true" />
           </folding>
         </state>
       </provider>

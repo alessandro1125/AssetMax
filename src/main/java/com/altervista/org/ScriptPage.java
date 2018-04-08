@@ -91,7 +91,6 @@ public class ScriptPage extends HttpServlet {
                             null,"account_id='" + accountId + "'");
                     try {
                         assert resultCount != null;
-                        resultCount.next();
                         if(resultCount.getInt("total") != 1){
                             try {
                                 assert out != null;
