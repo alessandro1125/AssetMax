@@ -312,7 +312,7 @@
         <div class="form-style-8">
             <p style="display: inline">Current Account Id: <%=accountId%></p>
             <br>
-            <form action="login?action=1" method="post">
+            <form action="login?from_page=handle_account.jsp" method="post">
                 <input type="text" name="new_id" placeholder="Enter a new Account ID...">
                 <input type="submit" value="Update ID">
             </form>

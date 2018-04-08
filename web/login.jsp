@@ -407,12 +407,19 @@
                                         }
                                     }
 
-                                    //Redirect nella area personale (redirect senza URL)
+                                    //Se sono autenticato
+                                    String dispUrl;
+                                    try {
+                                        dispUrl = request.getParameter("from_page");
+                                    }catch (Exception e){
+                                        dispUrl = "handle_account.jsp";
+                                    }
+                                    //Controllo dove devo essere reindirizzato
                                     request.setAttribute("email", email);
                                     request.setAttribute("password", password);
                                     request.setAttribute("authorization", "authorized");
                                     RequestDispatcher dispatcher;
-                                    dispatcher = request.getRequestDispatcher("handle_account.jsp");
+                                    dispatcher = request.getRequestDispatcher(dispUrl);
                                     dispatcher.forward(request, response);
                                     break;
 
