@@ -3,6 +3,8 @@
 <%@ page import="java.net.URI" %>
 <%@ page import="java.sql.*" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.HashMap" %>
+<%@ page import="utils.SqlUtils" %>
 <%@ page contentType="text/html;charset=UTF-8"%>
 <html>
     <head>
@@ -245,6 +247,12 @@
     </head>
     <body style="position: absolute; min-width: 1000px; width: 100%">
     <%
+        //Ricavo l'eventuale action
+        int action = 0;
+        try {
+            action = Integer.parseInt(request.getParameter("action"));
+        }catch (Exception e){}
+        //Ricavo l'eventuale email
         String email = null;
         try {
             email = (String)request.getAttribute("email");
@@ -254,20 +262,33 @@
             String redirectURL = "/";
             response.sendRedirect(redirectURL);
         }
+        switch (action){
+            case 1:
+                //AGGIORNO L'ACCOUNT ID
+                String account_id = null;
+                try {
+                    account_id = request.getParameter("new_id");
+                }catch (Exception e){
+                    e.printStackTrace();
+                    break;
+                }
+                //Lo inserisco nel DB
+                Connection connection = SqlUtils.getConnectionHeroku();
+                String query = "UPDATE assetmaxusers SET account_id='" + account_id + "' WHERE email='" + email + "'";
+                SqlUtils.sqlUpdate(SqlUtils.getConnectionHeroku(), query);
+                break;
+            default: break;
+        }
+
         //Ricavo l'account id attuale
         String accountId = "No ID";
-        Connection connection = getConnectionHeroku();
-        ResultSet resultSet = sqlRead(connection, "assetmaxusers", null, "email='" + email + "'");
+        Connection connection = SqlUtils.getConnectionHeroku();
+        ResultSet resultSet = SqlUtils.sqlSelect(connection, "assetmaxusers", null, "email='" + email + "'");
         //Analizzo il resultSet per trovare l'account ID
         try {
             resultSet.next();
             accountId = resultSet.getString("account_id");
         }catch (SQLException e){
-            e.printStackTrace();
-        }
-        try {
-            connection.close();
-        } catch (SQLException e) {
             e.printStackTrace();
         }
     %>
@@ -291,8 +312,11 @@
 
         <div class="form-style-8">
             <p style="display: inline">Current Account Id: <%=accountId%></p>
-            <p>New Accout id</p>
-
+            <br>
+            <form action="handle_account.jsp?action=1" method="post">
+                <input type="number" name="new_id" placeholder="Enter a new Account ID...">
+                <input type="submit" value="Update ID">
+            </form>
         </div>
 
         <script type="application/javascript">
@@ -305,120 +329,4 @@
             }
         </script>
     </body>
-
-    <%!
-
-        /**
-         * To read all Columns pass a null columns param
-         * @param connection Connection
-         * @param table String
-         * @param columns ArrayList<String>
-         * @param params String
-         * @return ResultSet
-         */
-        private static ResultSet sqlRead(Connection connection, String table,
-                                         ArrayList<String> columns, String params){
-
-            //Faccio una chiamata al db
-            Statement statement;
-            String query;
-
-            //Build the query
-            StringBuilder builder = new StringBuilder();
-            builder.append("SELECT ");
-            if(columns != null) {
-                for (int i = 0; i < columns.size(); i++) {
-                    builder.append(columns.get(i));
-                    if (i != columns.size() - 1)
-                        builder.append(",");
-                }
-            }else {
-                builder.append("*");
-            }
-            builder.append(" FROM ");
-            builder.append(table);
-            builder.append(" WHERE ");
-            builder.append(params);
-
-            query = builder.toString();
-
-            try{
-                statement = connection.createStatement();
-                ResultSet resultSet = statement.executeQuery(query);
-
-                if (resultSet != null){
-                    return resultSet;
-                }else {
-                    return null;
-                }
-            }catch (Exception sqle){
-                System.out.println(sqle.toString());
-                sqle.printStackTrace();
-                return null;
-            }
-        }
-
-        /**
-         * Metodo per la connessione al database locale Heroku
-         * @return Connection
-         */
-        private static Connection getConnectionHeroku(){
-            try {
-                URI dbUri;
-                dbUri = new URI(System.getenv("DATABASE_URL"));
-
-                String username = dbUri.getUserInfo().split(":")[0];
-                String password = dbUri.getUserInfo().split(":")[1];
-                String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
-
-                return DriverManager.getConnection(dbUrl, username, password);
-
-            } catch (URISyntaxException e) {
-                e.printStackTrace();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-
-            return null;
-        }
-
-        /**
-         *
-         * @return Connection
-         */
-        private static Connection getConnection(){
-
-            Connection connection = null;
-            try {
-
-                try {
-
-                    Class.forName("org.postgresql.Driver");
-
-                } catch (ClassNotFoundException e) {
-
-                    System.out.println("Where is your PostgreSQL JDBC Driver? "
-                            + "Include in your library path!");
-                    e.printStackTrace();
-                    return null;
-
-                }
-
-                String url = "jdbc:postgresql://ec2-79-125-110-209.eu-west-1.compute.amazonaws.com:5432/" +
-                        "d2qht4msggj59q?" +
-                        "sslmode=require&user=sagdjsuxgvztxk&" +
-                        "password=8be153a38455d94b7422704cec7de29ab6b0772c07f40a94f71932387641710a";
-
-                connection = DriverManager.getConnection(url);
-
-            }
-            catch (Exception e) {
-                System.err.println("Database connection failed");
-                System.err.println(e.getMessage());
-            }
-
-            return connection;
-
-        }
-    %>
 </html>

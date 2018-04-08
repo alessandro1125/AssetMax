@@ -6,6 +6,7 @@
 <%@ page import="java.sql.*" %>
 <%@ page import="java.net.URLDecoder" %>
 <%@ page import="java.net.URLEncoder" %>
+<%@ page import="utils.SqlUtils" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
     <head>
@@ -381,7 +382,7 @@
                     if(sendEmail(email, text, "User confirmation")){
 
                         //Se l'email è stata inviata correttamente salvo l'utente nel database
-                        HashMap<String, Object> map = new HashMap();
+                        HashMap<String, String> map = new HashMap();
                         map.put("email", email);
                         map.put("password", password);
                         map.put("name", name);
@@ -393,7 +394,7 @@
                         Connection connection = null;
 
                         try {
-                            connection = getConnectionHeroku();
+                            connection = SqlUtils.getConnectionHeroku();
                         }catch (Exception e){
                             e.printStackTrace();
                             try {
@@ -411,7 +412,7 @@
                         //Controllo se l'utente è già registrato
                         if(!searchUser(connection, email)){
 
-                            if(addSql(connection , map, "assetmaxusers")){
+                            if(SqlUtils.sqlAdd(connection , map, "assetmaxusers")){
 
                                 //Stampo la risposta
                                 %>
@@ -476,7 +477,7 @@
                     }
 
                     //Controllo se la passkey è corretta
-                    Connection connection = getConnectionHeroku();
+                    Connection connection = SqlUtils.getConnectionHeroku();
                     if (checkPasskey(connection, passkey2, email2)){
                         //Aggiorno lo stato di attivazione e cancello la passkey
                         if(updateActivtion(connection, email2)) {
@@ -548,7 +549,7 @@
                     }
 
                     //Controllo se l'utente è già stato attivato
-                    Connection connectionPass = getConnectionHeroku();
+                    Connection connectionPass = SqlUtils.getConnectionHeroku();
                     if(searchUserAtivated(connectionPass, email4)){
                         //Genero la passkey per la modifica password
                         double passkeyPassDoub = (Math.floor(Math.random() * Math.pow(10, 16)) / Math.pow(10, 16));
@@ -638,7 +639,7 @@
                     }
 
                     //Controllo nel database se i dati corrispondono
-                    Connection connection5 = getConnectionHeroku();
+                    Connection connection5 = SqlUtils.getConnectionHeroku();
                     if (checkPasskey(connection5, passkey5, email5)){
                         //Mostro il form per la reimpostazione della password
                         %>
@@ -729,7 +730,7 @@
                     System.out.print(newPassword);
 
                     //Aggiorno il db
-                    Connection connection6 = getConnectionHeroku();
+                    Connection connection6 = SqlUtils.getConnectionHeroku();
                     if(updatePassword(connection6, email6, newPassword)){
                         try {
                             connection6.close();
@@ -797,51 +798,6 @@
 
                 Statement stmt;
                 String query = "UPDATE assetmaxusers SET passkey='" + passkey + "' WHERE email='" + email + "'";
-
-                try {
-                    stmt = connection.createStatement();
-                    stmt.executeUpdate(query);
-                    stmt.close();
-                    return true;
-                }catch (SQLException e) {
-                    e.printStackTrace();
-                    System.out.println(e.toString());
-                    return false;
-                }
-            }
-
-            /**
-             *
-             * @param connection Connection
-             * @param record HashMap<String, Object>
-             * @param table Stirng
-             * @return boolean
-             */
-            private static boolean addSql(Connection connection, HashMap<String, Object> record, String table) {
-
-                Statement stmt;
-                String keys, values;
-                StringBuilder keysBuilder, valuesBuilder;
-                keysBuilder = new StringBuilder();
-                valuesBuilder = new StringBuilder();
-                for (String key : record.keySet()){
-                    keysBuilder = keysBuilder.append(key).append(" ,");
-
-                    if (record.get(key).getClass() == String.class)
-                        valuesBuilder.append("'");
-                    valuesBuilder = valuesBuilder.append(record.get(key));
-                    if (record.get(key).getClass() == String.class)
-                        valuesBuilder.append("'");
-                    valuesBuilder = valuesBuilder.append(" ,");
-                }
-                keys = keysBuilder.toString();
-                keys = keys.substring(0, keys.length()-2);
-
-                values = valuesBuilder.toString();
-                values = values.substring(0, values.length()-2);
-
-                String query = "INSERT INTO " + table + " (" + keys + ")" +
-                        " VALUES (" + values + ")";
 
                 try {
                     stmt = connection.createStatement();
@@ -973,69 +929,6 @@
                     sqle.printStackTrace();
                     return false;
                 }
-            }
-
-            /**
-             * Metodo per la connessione al database locale Heroku
-             * @return Connection
-             */
-            private static Connection getConnectionHeroku(){
-                try {
-                    URI dbUri;
-                    dbUri = new URI(System.getenv("DATABASE_URL"));
-
-                    String username = dbUri.getUserInfo().split(":")[0];
-                    String password = dbUri.getUserInfo().split(":")[1];
-                    String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
-
-                    return DriverManager.getConnection(dbUrl, username, password);
-
-                } catch (URISyntaxException e) {
-                    e.printStackTrace();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-
-                return null;
-            }
-
-            /**
-             *
-             * @return Connection
-             */
-            private static Connection getConnection(){
-
-                Connection connection = null;
-                try {
-
-                    try {
-
-                        Class.forName("org.postgresql.Driver");
-
-                    } catch (ClassNotFoundException e) {
-
-                        System.out.println("Where is your PostgreSQL JDBC Driver? "
-                                + "Include in your library path!");
-                        e.printStackTrace();
-                        return null;
-
-                    }
-
-                    String url = "jdbc:postgresql://ec2-79-125-110-209.eu-west-1.compute.amazonaws.com:5432/" +
-                            "d2qht4msggj59q?" +
-                            "sslmode=require&user=sagdjsuxgvztxk&" +
-                            "password=8be153a38455d94b7422704cec7de29ab6b0772c07f40a94f71932387641710a";
-
-                    connection = DriverManager.getConnection(url);
-
-                }
-                catch (Exception e) {
-                    System.err.println("Database connection failed");
-                    System.err.println(e.getMessage());
-                }
-
-                return connection;
-
             }
 
             /**
