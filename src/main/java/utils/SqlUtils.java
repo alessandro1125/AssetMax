@@ -70,7 +70,7 @@ public class SqlUtils {
 
         //Build the query
         StringBuilder builder = new StringBuilder();
-        builder.append("SELECT COUNT(");
+        builder.append("SELECT ");
         if(columns != null) {
             for (int i = 0; i < columns.size(); i++) {
                 builder.append(columns.get(i));
@@ -80,7 +80,7 @@ public class SqlUtils {
         }else {
             builder.append("*");
         }
-        builder.append(") FROM ");
+        builder.append(" FROM ");
         builder.append(table);
         builder.append(" WHERE ");
         builder.append(params);

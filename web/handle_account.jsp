@@ -286,6 +286,7 @@
         ResultSet resultSet = SqlUtils.sqlSelect(connection, "assetmaxusers", null, "email='" + email + "'");
         //Analizzo il resultSet per trovare l'account ID
         try {
+            assert resultSet != null;
             resultSet.next();
             accountId = resultSet.getString("account_id");
         }catch (SQLException e){

@@ -64,7 +64,7 @@
       <file leaf-file-name="Home.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/Home.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
+            <state relative-caret-position="0">
               <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -136,32 +136,32 @@
       <file leaf-file-name="handle_account.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/handle_account.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5440">
-              <caret line="320" column="0" lean-forward="false" selection-start-line="320" selection-start-column="0" selection-end-line="320" selection-end-column="0" />
+            <state relative-caret-position="505">
+              <caret line="289" column="23" lean-forward="false" selection-start-line="289" selection-start-column="23" selection-end-line="289" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScriptPage.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ScriptPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/ScriptPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5">
+            <state relative-caret-position="-311">
               <caret line="86" column="39" lean-forward="true" selection-start-line="86" selection-start-column="39" selection-end-line="86" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SqlUtils.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SqlUtils.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/utils/SqlUtils.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="437">
-              <caret line="82" column="25" lean-forward="false" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
+              <caret line="82" column="24" lean-forward="false" selection-start-line="82" selection-start-column="24" selection-end-line="82" selection-end-column="24" />
               <folding>
-                <element signature="e#3665#3666#0" expanded="true" />
-                <element signature="e#3712#3713#0" expanded="true" />
-                <marker date="1523213368776" expanded="true" signature="1722:1807" ph="INSERT INTO missingValue... " />
+                <element signature="e#3658#3659#0" expanded="true" />
+                <element signature="e#3705#3706#0" expanded="true" />
+                <marker date="1523214099374" expanded="true" signature="1722:1807" ph="INSERT INTO missingValue... " />
               </folding>
             </state>
           </provider>
@@ -198,12 +198,12 @@
         <option value="$PROJECT_DIR$/web/index_exemple.jsp" />
         <option value="$PROJECT_DIR$/web/sign_in.jsp" />
         <option value="$PROJECT_DIR$/web/login.jsp" />
-        <option value="$PROJECT_DIR$/web/handle_account.jsp" />
         <option value="$PROJECT_DIR$/web/script_page.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/altervista/org/Home.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/8e744472-fe7b-4f31-bfcc-1edcb4ac5b4f/console.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/utils/SqlUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/altervista/org/ScriptPage.java" />
+        <option value="$PROJECT_DIR$/web/handle_account.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/utils/SqlUtils.java" />
       </list>
     </option>
   </component>
@@ -524,12 +524,12 @@
       <workItem from="1523126412088" duration="6877000" />
       <workItem from="1523199594122" duration="6386000" />
       <workItem from="1523209385711" duration="2250000" />
-      <workItem from="1523212873736" duration="727000" />
+      <workItem from="1523212873736" duration="1224000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29127000" />
+    <option name="totallyTimeSpent" value="29624000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -937,21 +937,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/4a8cf6c1/8e744472-fe7b-4f31-bfcc-1edcb4ac5b4f/dd6auq15qvb9aa.public.assetmaxusers">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/handle_account.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5440">
-          <caret line="320" column="0" lean-forward="false" selection-start-line="320" selection-start-column="0" selection-end-line="320" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/script_page.jsp" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/Login.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -963,7 +948,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/Home.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
+        <state relative-caret-position="0">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1007,23 +992,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/SqlUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/ScriptPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="82" column="25" lean-forward="false" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
-          <folding>
-            <element signature="e#3665#3666#0" expanded="true" />
-            <element signature="e#3712#3713#0" expanded="true" />
-            <marker date="1523213368776" expanded="true" signature="1722:1807" ph="INSERT INTO missingValue... " />
-          </folding>
+        <state relative-caret-position="-311">
+          <caret line="86" column="39" lean-forward="true" selection-start-line="86" selection-start-column="39" selection-end-line="86" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/ScriptPage.java">
+    <entry file="das://table:/4a8cf6c1/8e744472-fe7b-4f31-bfcc-1edcb4ac5b4f/dd6auq15qvb9aa.public.assetmaxusers">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/handle_account.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
-          <caret line="86" column="39" lean-forward="true" selection-start-line="86" selection-start-column="39" selection-end-line="86" selection-end-column="39" />
+        <state relative-caret-position="505">
+          <caret line="289" column="23" lean-forward="false" selection-start-line="289" selection-start-column="23" selection-end-line="289" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/SqlUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="82" column="24" lean-forward="false" selection-start-line="82" selection-start-column="24" selection-end-line="82" selection-end-column="24" />
+          <folding>
+            <element signature="e#3658#3659#0" expanded="true" />
+            <element signature="e#3705#3706#0" expanded="true" />
+            <marker date="1523214099374" expanded="true" signature="1722:1807" ph="INSERT INTO missingValue... " />
+          </folding>
         </state>
       </provider>
     </entry>
