@@ -100,11 +100,11 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/utils/SqlUtils.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="624">
-              <caret line="66" column="75" lean-forward="false" selection-start-line="66" selection-start-column="75" selection-end-line="66" selection-end-column="75" />
+              <caret line="66" column="61" lean-forward="false" selection-start-line="66" selection-start-column="61" selection-end-line="66" selection-end-column="61" />
               <folding>
-                <element signature="e#6084#6085#0" expanded="true" />
-                <element signature="e#6131#6132#0" expanded="true" />
-                <marker date="1523385724956" expanded="true" signature="1896:1981" ph="INSERT INTO missingValue... " />
+                <element signature="e#6085#6086#0" expanded="true" />
+                <element signature="e#6132#6133#0" expanded="true" />
+                <marker date="1523385857290" expanded="true" signature="1896:1981" ph="INSERT INTO missingValue... " />
               </folding>
             </state>
           </provider>
@@ -567,12 +567,12 @@
       <workItem from="1523263563608" duration="520000" />
       <workItem from="1523273098120" duration="590000" />
       <workItem from="1523289713188" duration="320000" />
-      <workItem from="1523361541648" duration="8651000" />
+      <workItem from="1523361541648" duration="8785000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46135000" />
+    <option name="totallyTimeSpent" value="46269000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1055,11 +1055,11 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/SqlUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="624">
-          <caret line="66" column="75" lean-forward="false" selection-start-line="66" selection-start-column="75" selection-end-line="66" selection-end-column="75" />
+          <caret line="66" column="61" lean-forward="false" selection-start-line="66" selection-start-column="61" selection-end-line="66" selection-end-column="61" />
           <folding>
-            <element signature="e#6084#6085#0" expanded="true" />
-            <element signature="e#6131#6132#0" expanded="true" />
-            <marker date="1523385724956" expanded="true" signature="1896:1981" ph="INSERT INTO missingValue... " />
+            <element signature="e#6085#6086#0" expanded="true" />
+            <element signature="e#6132#6133#0" expanded="true" />
+            <marker date="1523385857290" expanded="true" signature="1896:1981" ph="INSERT INTO missingValue... " />
           </folding>
         </state>
       </provider>
