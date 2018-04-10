@@ -85,8 +85,8 @@
       <file leaf-file-name="ScriptPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/ScriptPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-170">
-              <caret line="90" column="54" lean-forward="true" selection-start-line="90" selection-start-column="54" selection-end-line="90" selection-end-column="54" />
+            <state relative-caret-position="527">
+              <caret line="98" column="21" lean-forward="true" selection-start-line="94" selection-start-column="20" selection-end-line="98" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#8426#8427#0" expanded="true" />
@@ -99,12 +99,12 @@
       <file leaf-file-name="SqlUtils.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/utils/SqlUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="60" column="8" lean-forward="false" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+            <state relative-caret-position="624">
+              <caret line="66" column="35" lean-forward="false" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
               <folding>
-                <element signature="e#5503#5504#0" expanded="true" />
-                <element signature="e#5550#5551#0" expanded="true" />
-                <marker date="1523387435699" expanded="true" signature="1894:1979" ph="INSERT INTO missingValue... " />
+                <element signature="e#5790#5791#0" expanded="true" />
+                <element signature="e#5837#5838#0" expanded="true" />
+                <marker date="1523388033393" expanded="true" signature="1894:1979" ph="INSERT INTO missingValue... " />
               </folding>
             </state>
           </provider>
@@ -567,12 +567,12 @@
       <workItem from="1523263563608" duration="520000" />
       <workItem from="1523273098120" duration="590000" />
       <workItem from="1523289713188" duration="320000" />
-      <workItem from="1523361541648" duration="10361000" />
+      <workItem from="1523361541648" duration="10958000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47845000" />
+    <option name="totallyTimeSpent" value="48442000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1042,8 +1042,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/ScriptPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-170">
-          <caret line="90" column="54" lean-forward="true" selection-start-line="90" selection-start-column="54" selection-end-line="90" selection-end-column="54" />
+        <state relative-caret-position="527">
+          <caret line="98" column="21" lean-forward="true" selection-start-line="94" selection-start-column="20" selection-end-line="98" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#8426#8427#0" expanded="true" />
@@ -1054,12 +1054,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/SqlUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="60" column="8" lean-forward="false" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+        <state relative-caret-position="624">
+          <caret line="66" column="35" lean-forward="false" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
           <folding>
-            <element signature="e#5503#5504#0" expanded="true" />
-            <element signature="e#5550#5551#0" expanded="true" />
-            <marker date="1523387435699" expanded="true" signature="1894:1979" ph="INSERT INTO missingValue... " />
+            <element signature="e#5790#5791#0" expanded="true" />
+            <element signature="e#5837#5838#0" expanded="true" />
+            <marker date="1523388033393" expanded="true" signature="1894:1979" ph="INSERT INTO missingValue... " />
           </folding>
         </state>
       </provider>
