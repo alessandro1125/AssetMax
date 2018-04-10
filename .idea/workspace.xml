@@ -99,12 +99,12 @@
       <file leaf-file-name="SqlUtils.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/utils/SqlUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="573">
-              <caret line="63" column="115" lean-forward="false" selection-start-line="63" selection-start-column="115" selection-end-line="63" selection-end-column="115" />
+            <state relative-caret-position="658">
+              <caret line="68" column="61" lean-forward="true" selection-start-line="68" selection-start-column="61" selection-end-line="68" selection-end-column="61" />
               <folding>
-                <element signature="e#5758#5759#0" expanded="true" />
-                <element signature="e#5805#5806#0" expanded="true" />
-                <marker date="1523385076615" expanded="true" signature="1896:1981" ph="INSERT INTO missingValue... " />
+                <element signature="e#6069#6070#0" expanded="true" />
+                <element signature="e#6116#6117#0" expanded="true" />
+                <marker date="1523385453912" expanded="true" signature="1896:1981" ph="INSERT INTO missingValue... " />
               </folding>
             </state>
           </provider>
@@ -567,12 +567,12 @@
       <workItem from="1523263563608" duration="520000" />
       <workItem from="1523273098120" duration="590000" />
       <workItem from="1523289713188" duration="320000" />
-      <workItem from="1523361541648" duration="8006000" />
+      <workItem from="1523361541648" duration="8385000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45490000" />
+    <option name="totallyTimeSpent" value="45869000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1054,12 +1054,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/SqlUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="63" column="115" lean-forward="false" selection-start-line="63" selection-start-column="115" selection-end-line="63" selection-end-column="115" />
+        <state relative-caret-position="658">
+          <caret line="68" column="61" lean-forward="true" selection-start-line="68" selection-start-column="61" selection-end-line="68" selection-end-column="61" />
           <folding>
-            <element signature="e#5758#5759#0" expanded="true" />
-            <element signature="e#5805#5806#0" expanded="true" />
-            <marker date="1523385076615" expanded="true" signature="1896:1981" ph="INSERT INTO missingValue... " />
+            <element signature="e#6069#6070#0" expanded="true" />
+            <element signature="e#6116#6117#0" expanded="true" />
+            <marker date="1523385453912" expanded="true" signature="1896:1981" ph="INSERT INTO missingValue... " />
           </folding>
         </state>
       </provider>
