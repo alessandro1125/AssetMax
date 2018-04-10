@@ -6,7 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/altervista/org/ScriptPage.java" line="93" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/altervista/org/ScriptPage.java" line="110" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0d53309-5268-4ccd-b4b6-1a19ee69db47" name="Default" comment="" />
@@ -85,12 +85,12 @@
       <file leaf-file-name="ScriptPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/ScriptPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="126" column="98" lean-forward="false" selection-start-line="126" selection-start-column="98" selection-end-line="126" selection-end-column="98" />
+            <state relative-caret-position="-170">
+              <caret line="90" column="54" lean-forward="true" selection-start-line="90" selection-start-column="54" selection-end-line="90" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#7733#7734#0" expanded="true" />
-                <element signature="e#7764#7765#0" expanded="true" />
+                <element signature="e#8426#8427#0" expanded="true" />
+                <element signature="e#8457#8458#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -99,12 +99,12 @@
       <file leaf-file-name="SqlUtils.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/utils/SqlUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="556">
-              <caret line="62" column="45" lean-forward="true" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
+            <state relative-caret-position="522">
+              <caret line="60" column="8" lean-forward="false" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
               <folding>
-                <element signature="e#5818#5819#0" expanded="true" />
-                <element signature="e#5865#5866#0" expanded="true" />
-                <marker date="1523386685284" expanded="true" signature="1894:1979" ph="INSERT INTO missingValue... " />
+                <element signature="e#5503#5504#0" expanded="true" />
+                <element signature="e#5550#5551#0" expanded="true" />
+                <marker date="1523387435699" expanded="true" signature="1894:1979" ph="INSERT INTO missingValue... " />
               </folding>
             </state>
           </provider>
@@ -567,12 +567,12 @@
       <workItem from="1523263563608" duration="520000" />
       <workItem from="1523273098120" duration="590000" />
       <workItem from="1523289713188" duration="320000" />
-      <workItem from="1523361541648" duration="9612000" />
+      <workItem from="1523361541648" duration="10361000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47096000" />
+    <option name="totallyTimeSpent" value="47845000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1042,24 +1042,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/ScriptPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="126" column="98" lean-forward="false" selection-start-line="126" selection-start-column="98" selection-end-line="126" selection-end-column="98" />
+        <state relative-caret-position="-170">
+          <caret line="90" column="54" lean-forward="true" selection-start-line="90" selection-start-column="54" selection-end-line="90" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7733#7734#0" expanded="true" />
-            <element signature="e#7764#7765#0" expanded="true" />
+            <element signature="e#8426#8427#0" expanded="true" />
+            <element signature="e#8457#8458#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/SqlUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="62" column="45" lean-forward="true" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
+        <state relative-caret-position="522">
+          <caret line="60" column="8" lean-forward="false" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
           <folding>
-            <element signature="e#5818#5819#0" expanded="true" />
-            <element signature="e#5865#5866#0" expanded="true" />
-            <marker date="1523386685284" expanded="true" signature="1894:1979" ph="INSERT INTO missingValue... " />
+            <element signature="e#5503#5504#0" expanded="true" />
+            <element signature="e#5550#5551#0" expanded="true" />
+            <marker date="1523387435699" expanded="true" signature="1894:1979" ph="INSERT INTO missingValue... " />
           </folding>
         </state>
       </provider>

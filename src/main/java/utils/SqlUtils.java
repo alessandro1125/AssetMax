@@ -58,16 +58,7 @@ public class SqlUtils {
 
         String query = "INSERT INTO " + table + " (" + keys + ")" +
                 " VALUES (" + values + ");";
-
-
-        byte[] queryBytes = query.getBytes();
-        for (int i = 0; i<queryBytes.length; i++){
-            if (queryBytes[i] == 0) {
-                System.out.println("PORCO DIO C'è UN CHAR CHE VALE 0 alla posizione: " + i + "/" + queryBytes.length);
-                System.out.println(query);
-            }
-        }
-
+        
         return executeUpdate(connection, query);
     }
 

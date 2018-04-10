@@ -12,6 +12,7 @@ import javax.validation.constraints.Null;
 import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 @WebServlet(
@@ -86,6 +87,22 @@ public class ScriptPage extends HttpServlet {
                             e.printStackTrace();
                         }
                     }
+
+                    //rimuovo il caratterre 0 dal time
+                    assert accessTime != null;
+                    byte[] timeBytes = accessTime.getBytes();
+                    ArrayList<Byte> byteTime = new ArrayList<>();
+                    for (Byte bytes : timeBytes){
+                        if (bytes != 0){
+                            byteTime.add(bytes);
+                        }
+                    }
+                    byte[] tmp = new byte[byteTime.size()];
+                    for (int i = 0; i < byteTime.size(); i++){
+                        tmp[i] = byteTime.get(i);
+                    }
+
+                    accessTime = new String(tmp);
 
                     //Controllo la corrispondenza
                     ResultSet resultCount = SqlUtils.sqlSelectCount(SqlUtils.getConnectionHeroku(), "assetmaxusers",
