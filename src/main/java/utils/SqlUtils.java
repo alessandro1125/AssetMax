@@ -62,9 +62,9 @@ public class SqlUtils {
         for (int i = 0; i<queryBytes.length; i++){
             if (queryBytes[i] == 0) {
                 System.out.println("PORCO DIO C'è UN CHAR CHE VALE 0 alla posizione: " + i + "/" + queryBytes.length);
-                for (int j = 50; j>= -50; j--) {
+                for (int j = 50; j>= -10; j--) {
                     if (j != 0) {
-                        System.out.println(queryBytes[i - j]);
+                        System.out.println(Byte.toString(queryBytes[i - j]));
                         if (j == 1)
                             System.out.println("|POSIZIONE___ZERO__|");
                     }
