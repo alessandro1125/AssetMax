@@ -59,14 +59,6 @@ public class SqlUtils {
         String query = "INSERT INTO " + table + " (" + keys + ")" +
                 " VALUES (" + values + ");";
 
-        byte[] timeBytes = query.getBytes();
-        int count1 = 0;
-        for (Byte bytes : timeBytes){
-            count1 ++;
-            if (bytes == 0){
-                System.out.println("PORCODDIO BYTE CON VALORE 0 ALLA POS: " + count1 + "/" + timeBytes.length);
-            }
-        }
         return executeUpdate(connection, query);
     }
 
@@ -186,7 +178,7 @@ public class SqlUtils {
      * @param query Stirng
      */
     public static void sqlUpdate(Connection connection, String query){
-        executeQuery(connection, query);
+        executeUpdate(connection, query);
     }
 
     /**
