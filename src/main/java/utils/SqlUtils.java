@@ -51,7 +51,7 @@ public class SqlUtils {
 
         String query = "INSERT INTO " + table + " (" + keys + ")" +
                 " VALUES (" + values + ");";
-
+        System.out.println("Query: " + query );
         return executeQuery(connection, query);
     }
 
