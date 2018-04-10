@@ -49,8 +49,8 @@ public class SqlUtils {
             valuesBuilder.append(record.get(key));
             valuesBuilder.append("'");
             if (count != record.size()) {
-                valuesBuilder.append(" ,");
-                keysBuilder.append(" ,");
+                valuesBuilder.append(",");
+                keysBuilder.append(",");
             }
         }
         keys = keysBuilder.toString();
@@ -58,17 +58,13 @@ public class SqlUtils {
 
         String query = "INSERT INTO " + table + " (" + keys + ")" +
                 " VALUES (" + values + ");";
+
+
         byte[] queryBytes = query.getBytes();
         for (int i = 0; i<queryBytes.length; i++){
             if (queryBytes[i] == 0) {
                 System.out.println("PORCO DIO C'è UN CHAR CHE VALE 0 alla posizione: " + i + "/" + queryBytes.length);
-                for (int j = 50; j>= -10; j--) {
-                    if (j != 0) {
-                        System.out.println(String.valueOf(queryBytes[i - j]));
-                        if (j == 1)
-                            System.out.println("|POSIZIONE___ZERO__|");
-                    }
-                }
+                System.out.println(query);
             }
         }
 
