@@ -115,10 +115,6 @@
                     connection.close();
                     stmt.close();
 
-                } catch (URISyntaxException e) {
-                    e.printStackTrace();
-                    result = e.toString();
-                    return result;
                 } catch (SQLException e) {
                     e.printStackTrace();
                     result = e.toString();
@@ -143,9 +139,6 @@
                     connection.close();
                     stmt.close();
 
-                } catch (URISyntaxException e) {
-                    e.printStackTrace();
-                    result = e.toString();
                 } catch (SQLException e) {
                     e.printStackTrace();
                     result = e.toString();
@@ -177,7 +170,7 @@
                     }
 
                     String url = "jdbc:postgresql://ec2-79-125-110-209.eu-west-1.compute.amazonaws.com:5432/" +
-                            "d2qht4msggj59q?" +
+                            "d2qht4msggj59q?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory&" +
                             "sslmode=require&user=sagdjsuxgvztxk&" +
                             "password=8be153a38455d94b7422704cec7de29ab6b0772c07f40a94f71932387641710a";
 

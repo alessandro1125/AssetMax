@@ -29,6 +29,13 @@ public class SqlUtils {
         return executeQuery(connection, queryBuilder.toString());
     }
 
+    /**
+     *
+     * @param connection Connection
+     * @param record HashMap<String, Stirng>
+     * @param table String
+     * @return boolean
+     */
     public static boolean sqlAdd(Connection connection, HashMap<String, String> record, String table){
         String keys, values;
         StringBuilder keysBuilder, valuesBuilder;
@@ -51,8 +58,7 @@ public class SqlUtils {
 
         String query = "INSERT INTO " + table + " (" + keys + ")" +
                 " VALUES (" + values + ");";
-        System.out.println("Query: " + query );
-        return executeQuery(connection, query);
+        return executeUpdate(connection, query);
     }
 
     /**
@@ -119,7 +125,7 @@ public class SqlUtils {
      * @return ResultSet
      */
     public static ResultSet sqlSelectCount(Connection connection, String table,
-                                      ArrayList<String> columns, String params){
+                                           ArrayList<String> columns, String params){
 
         //Faccio una chiamata al db
         Statement statement;
@@ -185,6 +191,31 @@ public class SqlUtils {
         try {
             stmt = connection.createStatement();
             stmt.executeQuery(query);
+            stmt.close();
+            connection.close();
+            return true;
+        }catch (SQLException e) {
+            e.printStackTrace();
+            try {
+                connection.close();
+            } catch (SQLException e1) {
+                e1.printStackTrace();
+            }
+            return false;
+        }
+    }
+
+    /**
+     *
+     * @param connection Connection
+     * @param query String
+     * @return boolean
+     */
+    public static boolean executeUpdate(Connection connection, String query){
+        Statement stmt;
+        try {
+            stmt = connection.createStatement();
+            stmt.executeUpdate(query);
             stmt.close();
             connection.close();
             return true;
