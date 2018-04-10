@@ -79,6 +79,14 @@ public class ScriptPage extends HttpServlet {
                     String accountName = request.getParameter("name_account");
                     String accessTime = request.getParameter("current_time");
 
+                    if (accessTime == null || accountId == null || accountName == null){
+                        try {
+                            out.write("Errore di sistema: parametri nulli".getBytes());
+                        }catch (IOException e){
+                            e.printStackTrace();
+                        }
+                    }
+
                     //Controllo la corrispondenza
                     ResultSet resultCount = SqlUtils.sqlSelectCount(SqlUtils.getConnectionHeroku(), "assetmaxusers",
                             null,"account_id='" + accountId + "'");
