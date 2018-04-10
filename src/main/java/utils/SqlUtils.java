@@ -11,20 +11,22 @@ public class SqlUtils {
     /**
      *
      * @param connection Connection
-     * @param query String
+     * @param tablename String
+     * @param columns HashMap<Stirng col_name, Stirng type>
      * @return boolean
      */
-    public static boolean sqlCreateTable(Connection connection, String query){
-        /*
-        String query = "CREATE TABLE assetMaxUsers (" +
-                "ID int PRIMARY KEY AUTO_INCREMENT," +
-                "NAME VARCHAR(255), " +
-                "EMAIL VARCHAR(255)," +
-                "ACCOUNT_ID VARCHAR(255)," +
-                "ACTIVE VARCHAR(255)," +
-                "ATTIVO VARCHAR(255)," +
-                "PASSKEY VARCHAR(255));";*/
-        return executeQuery(connection, query);
+    public static boolean sqlCreateTable(Connection connection, String tablename, HashMap<String, String> columns){
+        StringBuilder queryBuilder = new StringBuilder();
+        queryBuilder.append("CREATE TABLE ").append(tablename).append("(");
+        int count = 0;
+        for (String key : columns.keySet()){
+            count++;
+            queryBuilder.append(key).append(" ").append(columns.get(key));
+            if(count != columns.size())
+                queryBuilder.append(",");
+        }
+        queryBuilder.append(");");
+        return executeQuery(connection, queryBuilder.toString());
     }
 
     public static boolean sqlAdd(Connection connection, HashMap<String, String> record, String table){
@@ -32,24 +34,24 @@ public class SqlUtils {
         StringBuilder keysBuilder, valuesBuilder;
         keysBuilder = new StringBuilder();
         valuesBuilder = new StringBuilder();
+        int count = 0;
         for (String key : record.keySet()){
-            keysBuilder = keysBuilder.append(key).append(" ,");
-
-            if (record.get(key).getClass() == String.class)
-                valuesBuilder.append("'");
-            valuesBuilder = valuesBuilder.append(record.get(key));
-            if (record.get(key).getClass() == String.class)
-                valuesBuilder.append("'");
-            valuesBuilder = valuesBuilder.append(" ,");
+            count++;
+            keysBuilder.append(key);
+            valuesBuilder.append("'");
+            valuesBuilder.append(record.get(key));
+            valuesBuilder.append("'");
+            if (count != record.size()) {
+                valuesBuilder.append(" ,");
+                keysBuilder.append(" ,");
+            }
         }
         keys = keysBuilder.toString();
-        keys = keys.substring(0, keys.length()-2);
-
         values = valuesBuilder.toString();
-        values = values.substring(0, values.length()-2);
 
         String query = "INSERT INTO " + table + " (" + keys + ")" +
                 " VALUES (" + values + ");";
+
         return executeQuery(connection, query);
     }
 
@@ -178,7 +180,7 @@ public class SqlUtils {
      * @param query String
      * @return boolean
      */
-    public static boolean executeQuery(Connection connection, String query){
+    private static boolean executeQuery(Connection connection, String query){
         Statement stmt;
         try {
             stmt = connection.createStatement();
