@@ -41,7 +41,7 @@
       <file leaf-file-name="ScriptPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/ScriptPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2448">
+            <state relative-caret-position="0">
               <caret line="155" column="86" lean-forward="false" selection-start-line="155" selection-start-column="86" selection-end-line="155" selection-end-column="86" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -105,7 +105,7 @@
       <file leaf-file-name="sign_in.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/sign_in.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13328">
+            <state relative-caret-position="527">
               <caret line="784" column="53" lean-forward="false" selection-start-line="784" selection-start-column="53" selection-end-line="784" selection-end-column="53" />
               <folding>
                 <marker date="1523464332110" expanded="true" signature="36661:36753" ph="UPDATE assetmaxusers... " />
@@ -505,15 +505,16 @@
       <workItem from="1523361541648" duration="11560000" />
       <workItem from="1523463252527" duration="407000" />
       <workItem from="1523463909256" duration="1226000" />
-      <workItem from="1523472586920" duration="1438000" />
+      <workItem from="1523472586920" duration="1692000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52115000" />
+    <option name="totallyTimeSpent" value="52369000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -524,10 +525,10 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942432" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14818764" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14818764" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21428572" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -937,27 +938,12 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/SqlUtils.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/ScriptPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2448">
+        <state relative-caret-position="0">
           <caret line="155" column="86" lean-forward="false" selection-start-line="155" selection-start-column="86" selection-end-line="155" selection-end-column="86" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#8950#8951#0" expanded="true" />
             <element signature="e#8981#8982#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/sign_in.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13328">
-          <caret line="784" column="53" lean-forward="false" selection-start-line="784" selection-start-column="53" selection-end-line="784" selection-end-column="53" />
-          <folding>
-            <marker date="1523464332110" expanded="true" signature="36661:36753" ph="UPDATE assetmaxusers... " />
-            <marker date="1523464332110" expanded="true" signature="37516:37594" ph="UPDATE assetmaxusers... " />
-            <marker date="1523464332110" expanded="true" signature="38306:38382" ph="UPDATE assetmaxusers... " />
-            <marker date="1523464332110" expanded="true" signature="39217:39277" ph="SELECT passk... assetmaxusers" />
-            <marker date="1523464332110" expanded="true" signature="40476:40507" ph="SELECT email... assetmaxusers" />
-            <marker date="1523464332110" expanded="true" signature="41505:41543" ph="SELECT email... assetmaxusers" />
           </folding>
         </state>
       </provider>
@@ -987,6 +973,21 @@
           <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/sign_in.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="784" column="53" lean-forward="false" selection-start-line="784" selection-start-column="53" selection-end-line="784" selection-end-column="53" />
+          <folding>
+            <marker date="1523464332110" expanded="true" signature="36661:36753" ph="UPDATE assetmaxusers... " />
+            <marker date="1523464332110" expanded="true" signature="37516:37594" ph="UPDATE assetmaxusers... " />
+            <marker date="1523464332110" expanded="true" signature="38306:38382" ph="UPDATE assetmaxusers... " />
+            <marker date="1523464332110" expanded="true" signature="39217:39277" ph="SELECT passk... assetmaxusers" />
+            <marker date="1523464332110" expanded="true" signature="40476:40507" ph="SELECT email... assetmaxusers" />
+            <marker date="1523464332110" expanded="true" signature="41505:41543" ph="SELECT email... assetmaxusers" />
           </folding>
         </state>
       </provider>
