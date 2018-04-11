@@ -6,7 +6,7 @@
 <%@ page import="java.util.Base64" %>
 <%@ page import="java.io.IOException" %>
 <%@ page import="java.util.GregorianCalendar" %>
-<%@ page import="utils.SqlUtils" %>
+<%@ page import="com.assetx.libraries.utils.SqlUtils" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE HTML>
 <html lang="it" dir="ltr">

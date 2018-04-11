@@ -1,10 +1,7 @@
 <%@ page import="java.util.GregorianCalendar" %>
-<%@ page import="java.net.URISyntaxException" %>
-<%@ page import="java.net.URI" %>
 <%@ page import="java.sql.*" %>
-<%@ page import="java.util.ArrayList" %>
+<%@ page import="com.assetx.libraries.utils.SqlUtils" %>
 <%@ page import="java.util.HashMap" %>
-<%@ page import="utils.SqlUtils" %>
 <%@ page contentType="text/html;charset=UTF-8"%>
 <html>
     <head>
@@ -275,7 +272,11 @@
                 }
                 //Lo inserisco nel DB
                 String query = "UPDATE assetmaxusers SET account_id='" + account_id + "' WHERE email='" + email + "'";
-                SqlUtils.sqlUpdate(SqlUtils.getConnectionHeroku(), query);
+                HashMap<String, String> map = new HashMap<>();
+                map.put("account_id", account_id);
+                HashMap<String, String> params = new HashMap<>();
+                params.put("email", email);
+                SqlUtils.sqlUpdate(SqlUtils.getConnectionHeroku(), "assetmaxusers", map, params);
                 break;
             default: break;
         }

@@ -1,7 +1,0 @@
-com\altervista\org\Login.class
-launch\Main.class
-com\altervista\org\Home.class
-com\altervista\org\ScriptPage.class
-com\altervista\org\DoOperations.class
-com\altervista\org\SignIn.class
-utils\SqlUtils.class

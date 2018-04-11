@@ -1,14 +1,12 @@
 package com.altervista.org;
 
-import utils.SqlUtils;
+import com.assetx.libraries.utils.SqlUtils;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.validation.constraints.Null;
 import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -147,7 +145,15 @@ public class ScriptPage extends HttpServlet {
                                             String query = "UPDATE assetmaxuseractives SET account_id='" + accountId +
                                                     "', account_name='" + accountName + "', last_access='" + accessTime +
                                                     "' WHERE account_id='" + accountId + "';";
-                                            SqlUtils.sqlUpdate(SqlUtils.getConnectionHeroku(), query);
+
+                                            HashMap<String, String> map = new HashMap<>();
+                                            map.put("account_id", accountId);
+                                            map.put("last_access", accessTime);
+                                            map.put("account_name", accountName);
+                                            HashMap<String, String> params = new HashMap<>();
+                                            map.put("account_id", accountId);
+                                            SqlUtils.sqlUpdate(SqlUtils.getConnectionHeroku(),
+                                                    "assetmaxuseractives", map, params);
                                         }
                                     }catch (IOException e){
                                         e.printStackTrace();
