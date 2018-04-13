@@ -271,7 +271,6 @@
                     break;
                 }
                 //Lo inserisco nel DB
-                String query = "UPDATE assetmaxusers SET account_id='" + account_id + "' WHERE email='" + email + "'";
                 HashMap<String, String> map = new HashMap<>();
                 map.put("account_id", account_id);
                 HashMap<String, String> params = new HashMap<>();
