@@ -1,9 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: assetx:assetx:2.0">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/repo/assetx/assetx/2.0/assetx-2.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/assetx/assetx/2.0/assetx-2.0.jar!/" />
     </CLASSES>
-    <JAVADOC />
-    <SOURCES />
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/assetx/assetx/2.0/assetx-2.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/assetx/assetx/2.0/assetx-2.0-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>
