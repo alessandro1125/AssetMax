@@ -311,7 +311,7 @@
                  right: 20px; color: #e6e6e6; display: inline;">
         </div>
 
-        <input class="form-style-1" type="button" value="Download AssetMax" onclick="download_assetmax()">
+        <input type="button" class="form-style-1" value="Download AssetMax" onclick="download_assetmax()">
 
         <div class="form-style-8">
             <p style="display: inline">Current Account Id: <%=accountId%></p>

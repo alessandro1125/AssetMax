@@ -311,6 +311,8 @@
                  right: 20px; color: #e6e6e6; display: inline;">
         </div>
 
+        <input type="button" class="form-style-1" value="Download AssetMax" onclick="download_assetmax()">
+
         <div class="form-style-8">
             <p style="display: inline">Current Account Id: <%=accountId%></p>
             <br>
@@ -321,12 +323,17 @@
         </div>
 
         <script type="application/javascript">
+
+            function download_assetmax() {
+                //Link di downlaod
+                window.location.href = "AssetMax.zip";
+            }
+
             function logOut() {
                 //Cancello i cookie
                 document.cookie = "email"+'=; Max-Age=-99999999;';
                 document.cookie = "password"+'=; Max-Age=-99999999;';
                 //Log Out
-
                 window.location.replace("/login");
             }
         </script>
