@@ -98,7 +98,7 @@ public class ScriptPage extends HttpServlet {
                                 stringBuilder.append(charBuffer, 0, bytesRead);
                             }
                         } else {
-                            stringBuilder.append("");
+                            stringBuilder.append("Cazzo");
                         }
                     } catch (IOException ex) {
                         ex.printStackTrace();
