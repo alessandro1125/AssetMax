@@ -1,16 +1,20 @@
 package com.altervista.org;
 
 import com.assetx.libraries.utils.SqlUtils;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
+import java.io.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.HashMap;
 
 @WebServlet(
@@ -56,6 +60,7 @@ public class ScriptPage extends HttpServlet {
                 e.printStackTrace();
             }
 
+            //Trovo l'array di versioni valide
             String[] versions = null;
             try {
                 assert versionString != null;
@@ -75,11 +80,36 @@ public class ScriptPage extends HttpServlet {
                 //Controllo l'azione da fare
                 if (action.equals("check_user")){
                     //Controllo se l'utente è attivato
-                    String accountId = request.getParameter("id_account");
-                    String accountName = request.getParameter("name_account");
-                    String accessTime = request.getParameter("current_time");
+                    String accountId = null;
+                    String accountName = null;
+                    Calendar calendar = new GregorianCalendar();
+                    String accessTime = calendar.getTime().toString();
 
-                    if (accessTime == null || accountId == null || accountName == null){
+                    //Ricavo i parametri da json
+                    StringBuilder readBuilder = new StringBuilder();
+                    try {
+                        InputStream inputStream = request.getInputStream();
+                        BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+                        readBuilder = new StringBuilder();
+                        String line;
+                        while ((line = reader.readLine()) != null) {
+                            readBuilder.append(line);
+                        }
+                        reader.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                    //Decodifico il body in JSON
+                    try {
+                        JSONObject inputJson = new JSONObject(readBuilder.toString());
+                        accountId = inputJson.getString("id_account");
+                        accountName = inputJson.getString("name_account");
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+                    if (accountId == null || accountName == null){
                         try {
                             out.write("Errore di sistema: parametri nulli".getBytes());
                         }catch (IOException e){
