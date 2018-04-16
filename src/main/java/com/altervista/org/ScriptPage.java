@@ -38,7 +38,7 @@ public class ScriptPage extends HttpServlet {
             ServletOutputStream out = null;
             try {
                 out = response.getOutputStream();
-                //out.write(request.getIntHeader("Content-Type"));
+                out.write(request.getHeaders("Content-Type").nextElement().getBytes());
             }catch (IOException e){
                 e.printStackTrace();
             }
