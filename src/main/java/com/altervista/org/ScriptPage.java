@@ -86,7 +86,30 @@ public class ScriptPage extends HttpServlet {
 
                     //Ricavo i parametri da json
                     try {
-                        out.write(request.getInputStream().toString().getBytes());
+
+                        BufferedReader br = null;
+                        StringBuilder sb = new StringBuilder();
+
+                        String line;
+                        try {
+
+                            br = new BufferedReader(new InputStreamReader(request.getInputStream()));
+                            while ((line = br.readLine()) != null) {
+                                sb.append(line);
+                            }
+
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        } finally {
+                            if (br != null) {
+                                try {
+                                    br.close();
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        }
+                        out.write(sb.toString().getBytes());
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
