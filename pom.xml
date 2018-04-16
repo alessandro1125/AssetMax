@@ -101,7 +101,7 @@
         <dependency>
             <groupId>assetx</groupId>
             <artifactId>assetx</artifactId>
-            <version>3.0</version>
+            <version>3.1</version>
         </dependency>
 
         <dependency>
