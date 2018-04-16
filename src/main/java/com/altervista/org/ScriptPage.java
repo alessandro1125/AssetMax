@@ -94,6 +94,7 @@ public class ScriptPage extends HttpServlet {
                         while ((line = reader.readLine()) != null) {
                             readBuilder.append(line);
                         }
+                        out.write(readBuilder.toString().getBytes());
                         reader.close();
                     } catch (IOException e) {
                         e.printStackTrace();
