@@ -85,42 +85,16 @@ public class ScriptPage extends HttpServlet {
                     String accessTime = calendar.getTime().toString();
 
                     //Ricavo i parametri da json
-                    StringBuilder stringBuilder = new StringBuilder();
-                    BufferedReader bufferedReader = null;
                     try {
-                        InputStream inputStream = request.getInputStream();
-                        if (inputStream != null) {
-                            bufferedReader = new BufferedReader(new InputStreamReader(
-                                    inputStream));
-                            char[] charBuffer = new char[128];
-                            int bytesRead = -1;
-                            while ((bytesRead = bufferedReader.read(charBuffer)) > 0) {
-                                stringBuilder.append(charBuffer, 0, bytesRead);
-                            }
-                        } else {
-                            stringBuilder.append("Cazzo");
-                        }
-                    } catch (IOException ex) {
-                        ex.printStackTrace();
-                    } finally {
-                        if (bufferedReader != null) {
-                            try {
-                                bufferedReader.close();
-                            } catch (IOException ex) {
-                                ex.printStackTrace();
-                            }
-                        }
-                    }
-                    String body = stringBuilder.toString();
-                    try {
-                        out.write(body.getBytes());
+                        out.write(request.getInputStream().toString().getBytes());
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
 
+
                     //Decodifico il body in JSON
                     try {
-                        JSONObject inputJson = new JSONObject(body);
+                        JSONObject inputJson = new JSONObject("");
                         accountId = inputJson.getString("id_account");
                         accountName = inputJson.getString("name_account");
                     } catch (JSONException e) {
