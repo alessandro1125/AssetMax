@@ -79,12 +79,22 @@ public class ScriptPage extends HttpServlet {
                 //Controllo l'azione da fare
                 if (action.equals("check_user")){
                     //Controllo se l'utente è attivato
-                    String accountId = request.getParameter("id_account");
-                    String accountName = request.getParameter("name_account");
+                    String accountId = request.getParameter("account_id");
+                    String accountName = request.getParameter("account_name");
+                    String accountBalance = request.getParameter("account_balance");
+                    String accountCredit = request.getParameter("account_credit");
+                    String accountCompany = request.getParameter("account_company");
+                    String accountCurrency = request.getParameter("account_currency");
+                    String accountEquity = request.getParameter("account_equity");
+                    String accountFreeMargin = request.getParameter("account_freemargin");
+                    String accountLeverage = request.getParameter("account_leverage");
+                    String accountMargin = request.getParameter("account_margin");
+                    String accountServer = request.getParameter("account_server");
+                    String runningState = request.getParameter("running_state");
                     Calendar calendar = new GregorianCalendar();
                     String accessTime = calendar.getTime().toString();
 
-                    if (accountId == null || accountName == null){
+                    if (accountId == null){
                         try {
                             out.write("Errore di sistema: parametri nulli".getBytes());
                         }catch (IOException e){
@@ -139,27 +149,29 @@ public class ScriptPage extends HttpServlet {
                                                 accountId + "'");
                                         assert accesResult != null;
                                         accesResult.next();
+                                        HashMap<String, String> records = new HashMap<>();
+                                        records.put("account_id", accountId);
+                                        records.put("account_name", accountName);
+                                        records.put("last_access", accessTime);
+                                        records.put("account_balance", accountBalance);
+                                        records.put("account_credit", accountCredit);
+                                        records.put("account_company",accountCompany);
+                                        records.put("account_currency", accountCurrency);
+                                        records.put("account_equity", accountEquity);
+                                        records.put("account_freemargin", accountFreeMargin);
+                                        records.put("account_leverage", accountLeverage);
+                                        records.put("account_margin", accountMargin);
+                                        records.put("account_server", accountServer);
+                                        records.put("running_state", runningState);
                                         if (accesResult.getInt("total") != 1){
                                             //Creo un nuovo record
-                                            HashMap<String, String> records = new HashMap<>();
-                                            records.put("account_id", accountId);
-                                            records.put("account_name", accountName);
-                                            records.put("last_access", accessTime);
                                             SqlUtils.sqlAdd(SqlUtils.getConnectionHeroku(), records, "assetmaxuseractives");
                                         }else {
                                             //Aggiorno l'esistente
-                                            String query = "UPDATE assetmaxuseractives SET account_id='" + accountId +
-                                                    "', account_name='" + accountName + "', last_access='" + accessTime +
-                                                    "' WHERE account_id='" + accountId + "';";
-
-                                            HashMap<String, String> map = new HashMap<>();
-                                            map.put("account_id", accountId);
-                                            map.put("last_access", accessTime);
-                                            map.put("account_name", accountName);
                                             HashMap<String, String> params = new HashMap<>();
-                                            map.put("account_id", accountId);
+                                            params.put("account_id", accountId);
                                             SqlUtils.sqlUpdate(SqlUtils.getConnectionHeroku(),
-                                                    "assetmaxuseractives", map, params);
+                                                    "assetmaxuseractives", records, params);
                                         }
                                     }catch (IOException e){
                                         e.printStackTrace();

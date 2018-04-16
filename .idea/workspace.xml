@@ -6,7 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/altervista/org/ScriptPage.java" line="114" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/altervista/org/ScriptPage.java" line="124" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0d53309-5268-4ccd-b4b6-1a19ee69db47" name="Default" comment="" />
@@ -41,8 +41,8 @@
       <file leaf-file-name="ScriptPage.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/ScriptPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="82" column="75" selection-start-line="82" selection-start-column="75" selection-end-line="82" selection-end-column="75" />
+            <state relative-caret-position="503">
+              <caret line="104" column="54" lean-forward="true" selection-start-line="104" selection-start-column="54" selection-end-line="104" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -431,12 +431,12 @@
       <workItem from="1523715217793" duration="37000" />
       <workItem from="1523726888384" duration="2318000" />
       <workItem from="1523745315812" duration="85000" />
-      <workItem from="1523901797971" duration="5843000" />
+      <workItem from="1523901797971" duration="7592000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66916000" />
+    <option name="totallyTimeSpent" value="68665000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -738,8 +738,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/ScriptPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="82" column="75" selection-start-line="82" selection-start-column="75" selection-end-line="82" selection-end-column="75" />
+        <state relative-caret-position="503">
+          <caret line="104" column="54" lean-forward="true" selection-start-line="104" selection-start-column="54" selection-end-line="104" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
