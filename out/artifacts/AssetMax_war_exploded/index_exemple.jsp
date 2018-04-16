@@ -11,158 +11,57 @@
 
         <%
 
+
+            //createTable();
+
             //Reindirizzo al login
             //createTable();
-            String redirectURL = "login.jsp?action=0";
-            response.sendRedirect(redirectURL);
+            /*String redirectURL = "/login";
+            response.sendRedirect(redirectURL);*/
+
 
         %>
 
         <%!
 
-            private static String addRecord(){
+            /**
+             *
+             * @return Connection
+             */
+            private static Connection getConnection(){
 
-                String result;
-                Statement stmt = null;
-                Connection connection;
-
-                String query = "INSERT INTO users (email, password, nome, cognome, anno, mese, giorno, attivo, passkey, devices_uid)" +
-                        " VALUES ('admin@assetx.com', 'admin1125', 'admin', 'admin', '0000', '00', '00', 1, '0', '')";
-
+                Connection connection = null;
                 try {
-                    connection = getConnection();
-                    stmt = connection.createStatement();
-                    stmt.executeQuery(query);
-                    result = "Succesfully done";
-                    connection.close();
-                    stmt.close();
 
-                } catch (URISyntaxException e) {
-                    e.printStackTrace();
-                    result = e.toString();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                    result = e.toString();
-                }
+                    try {
 
-                return result;
-            }
+                        Class.forName("org.postgresql.Driver");
 
-            private static String createTable(){
-                String result;
-                Statement stmt = null;
-                Connection connection;
+                    } catch (ClassNotFoundException e) {
 
-                String query = "CREATE TABLE users (" +
-                                    "email VARCHAR(255)," +
-                                    "password VARCHAR(255), " +
-                                    "nome VARCHAR(255)," +
-                                    "cognome VARCHAR(255)," +
-                                    "anno VARCHAR(255)," +
-                                    "mese VARCHAR(255)," +
-                                    "giorno VARCHAR(255)," +
-                                    "attivo VARCHAR(255)," +
-                                    "passkey VARCHAR(255)," +
-                                    "devices_uid VARCHAR(255));";
+                        System.out.println("Where is your PostgreSQL JDBC Driver? "
+                                + "Include in your library path!");
+                        e.printStackTrace();
+                        return null;
 
-                try {
-                    connection = getConnection();
-                    stmt = connection.createStatement();
-                    stmt.executeQuery(query);
-                    result = "Succesfully done";
-                    connection.close();
-                    stmt.close();
-
-                } catch (URISyntaxException e) {
-                    e.printStackTrace();
-                    result = e.toString();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                    result = e.toString();
-                }
-
-                return result;
-            }
-
-            private static String select(){
-
-                String result ;
-                ArrayList<String> recordsArr = new ArrayList();
-                Statement stmt;
-                Connection connection;
-
-                String query = "SELECT email FROM users";
-
-                try {
-                    connection = getConnection();
-                    stmt = connection.createStatement();
-
-                    ResultSet rs = stmt.executeQuery(query);
-                    while (rs.next()) {
-                        String lastName = rs.getString("email");
-                        recordsArr.add(lastName);
                     }
 
-                    StringBuilder stringBuilder;
-                    stringBuilder = new StringBuilder();
-                    for (String row : recordsArr){
-                        stringBuilder.append(row +'\n');
-                    }
-                    result = stringBuilder.toString();
+                    String url = "jdbc:postgresql://ec2-79-125-110-209.eu-west-1.compute.amazonaws.com:5432/" +
+                            "d2qht4msggj59q?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory&" +
+                            "sslmode=require&user=sagdjsuxgvztxk&" +
+                            "password=8be153a38455d94b7422704cec7de29ab6b0772c07f40a94f71932387641710a";
 
-                    connection.close();
-                    stmt.close();
+                    connection = DriverManager.getConnection(url);
 
-                } catch (URISyntaxException e) {
-                    e.printStackTrace();
-                    result = e.toString();
-                    return result;
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                    result = e.toString();
-                    return result;
                 }
-                return result;
-
-            }
-
-            private static String delete(){
-                String result;
-                Statement stmt = null;
-                Connection connection;
-
-                String query = "DELETE FROM `Users` WHERE 1";
-
-                try {
-                    connection = getConnection();
-                    stmt = connection.createStatement();
-                    stmt.executeQuery(query);
-                    result = "Succesfully done";
-                    connection.close();
-                    stmt.close();
-
-                } catch (URISyntaxException e) {
-                    e.printStackTrace();
-                    result = e.toString();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                    result = e.toString();
+                catch (Exception e) {
+                    System.err.println("Database connection failed");
+                    System.err.println(e.getMessage());
                 }
 
-                return result;
+                return connection;
+
             }
-
-            private static Connection getConnection() throws URISyntaxException, SQLException {
-
-                URI dbUri = new URI(System.getenv("DATABASE_URL"));
-
-                String username = dbUri.getUserInfo().split(":")[0];
-                String password = dbUri.getUserInfo().split(":")[1];
-                String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
-
-                return DriverManager.getConnection(dbUrl, username, password);
-            }
-
 
         %>
 

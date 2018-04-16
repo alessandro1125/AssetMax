@@ -260,7 +260,7 @@
         <div class="form-style-8">
             <h2>Sign In</h2>
             <p id="reportMessage" style="display: none"></p>
-            <form action="sign_in?action=1" method="post">
+            <form action="sign_in?action=1" method="post" enctype="application/x-www-form-urlencoded">
                 <input type="text" id="nome" name="nome" placeholder="Name...">
                 <input type="email" id="email" name="email" placeholder="Email..." style="display: none">
                 <input type="password" id="password" name="password" placeholder="Password..." style="display: none">
@@ -525,7 +525,7 @@
                     %>
         <div class="form-style-8">
             <h2>Reset Password</h2>
-            <form class="form-style-8" action="sign_in?action=4" method="POST">
+            <form class="form-style-8" action="sign_in?action=4" method="POST" enctype="application/x-www-form-urlencoded">
                 <input type="email" name="email" placeholder="Enter your email...">
                 <input type="submit" value="Submit">
             </form>
@@ -646,7 +646,7 @@
         <div class="form-style-8">
             <h2>Set new password</h2>
             <p id="messagesp" style="display: none"></p>
-            <form class="form-style-8" action="sign_in?action=6&email=<%= email5Encoded%>" method="POST">
+            <form class="form-style-8" action="sign_in?action=6&email=<%= email5Encoded%>" method="POST" enctype="application/x-www-form-urlencoded">
                 <input type="password" id="newpassword" name="password" placeholder="Enter the new password...">
                 <input type="password" id="newpasswordconf" name="password_confirm" placeholder="Confirm password...">
                 <input type="submit" value="Confirm" id="sendreq" style="display: none">

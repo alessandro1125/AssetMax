@@ -6,7 +6,7 @@
 <%@ page import="java.util.Base64" %>
 <%@ page import="java.io.IOException" %>
 <%@ page import="java.util.GregorianCalendar" %>
-<%@ page import="sun.misc.Request" %>
+<%@ page import="com.assetx.libraries.utils.SqlUtils" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE HTML>
 <html lang="it" dir="ltr">
@@ -14,7 +14,7 @@
         <%
             String time = GregorianCalendar.getInstance().getTime().toString();
         %>
-        <title>Get Advertisment</title>
+        <title>Asset Max</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="stile-1.css?<%= time %>" rel="stylesheet" type="text/css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -323,16 +323,16 @@
         <div dir="ltr" style="text-align: center;background-color:white;font-family:sans-serif;font-weight:lighter;color:#595959;">
             <div class="form-style-8">
                 <h2>Login</h2>
-                <form action="${pageContext.request.contextPath}/login?action=1" method="post">
+                <form action="login?action=1" method="post" enctype="application/x-www-form-urlencoded">
                     <input type="email" name="email" placeholder="Your email..."/>
                     <input type="password" name="password" placeholder="Your password..."/>
                     <input type="submit" value="Login">
                 </form>
-                <form action="${pageContext.request.contextPath}/sign_in?action=0" method="post">
+                <form action=sign_in?action=0" method="post" enctype="application/x-www-form-urlencoded">
                     <input type="submit" value="Sign In">
                 </form>
-                <form action="${pageContext.request.contextPath}/sign_in?action=3" method="post">
-                    <input type="submit"value="Reset Password">
+                <form action="sign_in?action=3" method="post" enctype="application/x-www-form-urlencoded">
+                    <input type="submit" value="Reset Password">
                 </form>
             </div>
         </div>
@@ -381,7 +381,7 @@
                 try {
                     //Mi connetto al db
                     Connection connection;
-                    connection = getConnectionHeroku();
+                    connection = SqlUtils.getConnectionHeroku();
 
                     if (connection != null) {
                         if (email != null && password != null) {
@@ -407,14 +407,22 @@
                                         }
                                     }
 
-                                    //Redirect nella area personale (redirect senza URL)
+                                    //Se sono autenticato
+                                    String dispUrl = null;
+                                    try {
+                                        dispUrl = request.getParameter("from_page");
+                                    }catch (Exception e){
+                                        e.printStackTrace();
+                                    }
+                                    if (dispUrl == null)
+                                        dispUrl = "handle_account.jsp";
+                                    //Controllo dove devo essere reindirizzato
                                     request.setAttribute("email", email);
                                     request.setAttribute("password", password);
                                     request.setAttribute("authorization", "authorized");
                                     RequestDispatcher dispatcher;
-                                    dispatcher = request.getRequestDispatcher("uids_dashboard.jsp");
+                                    dispatcher = request.getRequestDispatcher(dispUrl);
                                     dispatcher.forward(request, response);
-
                                     break;
 
                                 case 1:
@@ -496,7 +504,7 @@
                 Statement statement;
                 String query;
 
-                query = "SELECT email,password,attivo FROM users";
+                query = "SELECT email,password,attivo FROM assetmaxusers";
 
                 try{
                     statement = connection.createStatement();
@@ -513,8 +521,8 @@
                             passwordFounded = true;
                         if (emailFounded && passwordFounded && resultSet.getString("attivo").equals("1"))
                             attivato = true;
-
                     }
+                    connection.close();
                     //Genero output
                     if (!emailFounded)
                         return 1;
@@ -530,159 +538,6 @@
                     return -1;
                 }
             }
-
-            /**
-             * Select from SQL database
-             * @param names ArrayList<String>
-             * @param table String
-             * @return ArrayList<Hashmap<String, String>>
-             */
-            private static ArrayList<HashMap<String, String>> selectSql(Connection connection, ArrayList<String> names, String table){
-
-                Statement stmt;
-                ArrayList<HashMap<String, String>> result = new ArrayList();
-                String queryNames;
-                StringBuilder namesBuilder = new StringBuilder();
-                for (int i = 0; i < names.size(); i++){
-                    if(i < names.size()-1)
-                        namesBuilder.append(names.get(i)).append(", ");
-                    namesBuilder.append(names.get(i));
-                }
-                queryNames = namesBuilder.toString();
-
-                String query = "SELECT "+ queryNames + " FROM " + table;
-
-                try {
-                    stmt = connection.createStatement();
-
-                    ResultSet rs = stmt.executeQuery(query);
-                    while (rs.next()) {
-                        HashMap<String, String> tmpRes = new HashMap();
-                        for (String key : names){
-                            tmpRes.put(key, rs.getString(key));
-                        }
-                        result.add(tmpRes);
-                    }
-                    if (result.size() == 0)
-                        return null;
-
-                    stmt.close();
-
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                    System.out.println(e.toString());
-                    return null;
-                }
-
-                return result;
-            }
-
-            /**
-             *
-             * @param connection Connection
-             * @param record HashMap<String, Object>
-             * @param table String
-             */
-            private void addSql(Connection connection, HashMap<String, Object> record, String table){
-
-                Statement stmt;
-                String keys, values;
-                StringBuilder keysBuilder, valuesBuilder;
-                keysBuilder = new StringBuilder();
-                valuesBuilder = new StringBuilder();
-                for (String key : record.keySet()){
-                    keysBuilder = keysBuilder.append(key).append(" ,");
-
-                    if (record.get(key).getClass() == String.class)
-                        valuesBuilder.append("'");
-                    valuesBuilder = valuesBuilder.append(record.get(key));
-                    if (record.get(key).getClass() == String.class)
-                        valuesBuilder.append("'");
-                    valuesBuilder = valuesBuilder.append(" ,");
-                }
-                keys = keysBuilder.toString();
-                keys = keys.substring(0, keys.length()-2);
-
-                values = valuesBuilder.toString();
-                values = values.substring(0, values.length()-2);
-
-                String query = "INSERT INTO " + table + " (" + keys + ")" +
-                        " VALUES (" + values + ")";
-
-                try {
-                    stmt = connection.createStatement();
-                    stmt.executeQuery(query);
-                    stmt.close();
-
-                }catch (SQLException e) {
-                    e.printStackTrace();
-                    System.out.println(e.toString());
-                }
-            }
-
-            /**
-             * Metodo per la connessione al database locale Heroku
-             * @return Connection
-             */
-            private static Connection getConnectionHeroku(){
-                try {
-                    URI dbUri = null;
-                    dbUri = new URI(System.getenv("DATABASE_URL"));
-
-                    String username = dbUri.getUserInfo().split(":")[0];
-                    String password = dbUri.getUserInfo().split(":")[1];
-                    String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
-
-                    return DriverManager.getConnection(dbUrl, username, password);
-
-                } catch (URISyntaxException e) {
-                    e.printStackTrace();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-
-                return null;
-            }
-
-            /**
-             *
-             * @return Connection
-             */
-            private static Connection getConnection(){
-
-                Connection connection = null;
-                try {
-
-                    try {
-
-                        Class.forName("org.postgresql.Driver");
-
-                    } catch (ClassNotFoundException e) {
-
-                        System.out.println("Where is your PostgreSQL JDBC Driver? "
-                                + "Include in your library path!");
-                        e.printStackTrace();
-                        return null;
-
-                    }
-
-                    String url = "jdbc:postgresql://ec2-79-125-110-209.eu-west-1.compute.amazonaws.com:5432/" +
-                            "d2qht4msggj59q?" +
-                            "sslmode=require&user=sagdjsuxgvztxk&" +
-                            "password=8be153a38455d94b7422704cec7de29ab6b0772c07f40a94f71932387641710a";
-
-                    connection = DriverManager.getConnection(url);
-
-                }
-                catch (Exception e) {
-                    System.err.println("Database connection failed");
-                    System.err.println(e.getMessage());
-                }
-
-                return connection;
-
-            }
-
         %>
     </body>
 </html>

@@ -314,7 +314,7 @@
         <div class="form-style-8">
             <p style="display: inline">Current Account Id: <%=accountId%></p>
             <br>
-            <form action="login?from_page=handle_account.jsp?handle_action=1" method="post">
+            <form action="login?from_page=handle_account.jsp?handle_action=1" method="post" enctype="application/x-www-form-urlencoded">
                 <input type="text" name="new_id" placeholder="Enter a new Account ID...">
                 <input type="submit" value="Update ID">
             </form>
@@ -326,6 +326,7 @@
                 document.cookie = "email"+'=; Max-Age=-99999999;';
                 document.cookie = "password"+'=; Max-Age=-99999999;';
                 //Log Out
+
                 window.location.replace("/login");
             }
         </script>

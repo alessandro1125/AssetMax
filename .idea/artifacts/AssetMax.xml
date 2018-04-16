@@ -1,6 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" build-on-make="true" name="AssetMax">
-    <output-path>$PROJECT_DIR$/out/artifacts/AssetMax</output-path>
-    <root id="archive" name="AssetMax.war" />
-  </artifact>
-</component>
