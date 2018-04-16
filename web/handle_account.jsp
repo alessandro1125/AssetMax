@@ -326,7 +326,7 @@
 
             function download_assetmax() {
                 //Link di downlaod
-                window.location.href = "AssetMax.zip";
+                window.location.href = "/download_zip";
             }
 
             function logOut() {
