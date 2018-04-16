@@ -85,24 +85,42 @@ public class ScriptPage extends HttpServlet {
                     String accessTime = calendar.getTime().toString();
 
                     //Ricavo i parametri da json
-                    StringBuilder readBuilder = new StringBuilder();
+                    StringBuilder stringBuilder = new StringBuilder();
+                    BufferedReader bufferedReader = null;
                     try {
                         InputStream inputStream = request.getInputStream();
-                        BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
-                        readBuilder = new StringBuilder();
-                        String line;
-                        while ((line = reader.readLine()) != null) {
-                            readBuilder.append(line);
+                        if (inputStream != null) {
+                            bufferedReader = new BufferedReader(new InputStreamReader(
+                                    inputStream));
+                            char[] charBuffer = new char[128];
+                            int bytesRead = -1;
+                            while ((bytesRead = bufferedReader.read(charBuffer)) > 0) {
+                                stringBuilder.append(charBuffer, 0, bytesRead);
+                            }
+                        } else {
+                            stringBuilder.append("");
                         }
-                        out.write(readBuilder.toString().getBytes());
-                        reader.close();
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    } finally {
+                        if (bufferedReader != null) {
+                            try {
+                                bufferedReader.close();
+                            } catch (IOException ex) {
+                                ex.printStackTrace();
+                            }
+                        }
+                    }
+                    String body = stringBuilder.toString();
+                    try {
+                        out.write(body.getBytes());
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
 
                     //Decodifico il body in JSON
                     try {
-                        JSONObject inputJson = new JSONObject(readBuilder.toString());
+                        JSONObject inputJson = new JSONObject(body);
                         accountId = inputJson.getString("id_account");
                         accountName = inputJson.getString("name_account");
                     } catch (JSONException e) {
