@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ScriptPage extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response){
+    protected void doPost(HttpServletRequest request, HttpServletResponse response){
 
         //Ricavo i parametri principali
         String action = null;
@@ -79,50 +79,10 @@ public class ScriptPage extends HttpServlet {
                 //Controllo l'azione da fare
                 if (action.equals("check_user")){
                     //Controllo se l'utente è attivato
-                    String accountId = null;
-                    String accountName = null;
+                    String accountId = request.getParameter("id_account");
+                    String accountName = request.getParameter("name_account");
                     Calendar calendar = new GregorianCalendar();
                     String accessTime = calendar.getTime().toString();
-
-                    //Ricavo i parametri da json
-                    try {
-
-                        BufferedReader br = null;
-                        StringBuilder sb = new StringBuilder();
-
-                        String line;
-                        try {
-
-                            br = new BufferedReader(new InputStreamReader(request.getInputStream()));
-                            while ((line = br.readLine()) != null) {
-                                sb.append(line);
-                            }
-
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        } finally {
-                            if (br != null) {
-                                try {
-                                    br.close();
-                                } catch (IOException e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                        }
-                        out.write(sb.toString().getBytes());
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-
-
-                    //Decodifico il body in JSON
-                    try {
-                        JSONObject inputJson = new JSONObject("");
-                        accountId = inputJson.getString("id_account");
-                        accountName = inputJson.getString("name_account");
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
 
                     if (accountId == null || accountName == null){
                         try {
@@ -243,10 +203,5 @@ public class ScriptPage extends HttpServlet {
                 e.printStackTrace();
             }
         }
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp){
-        doGet(req,resp);
     }
 }
