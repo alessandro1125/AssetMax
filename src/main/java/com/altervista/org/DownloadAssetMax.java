@@ -18,7 +18,7 @@ public class DownloadAssetMax extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response){
         try {
-            FileInputStream fileInputStream = new FileInputStream("resources/AssetMax.zip");
+            FileInputStream fileInputStream = new FileInputStream("src/main/java/resources/AssetMax.zip");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
