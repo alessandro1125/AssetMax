@@ -326,7 +326,7 @@
 
             function download_assetmax() {
                 //Link di downlaod
-                window.location.href = "https://assetmax.herokuapp.com/res/assetmax.zip";
+                window.location.href = "AssetMax.zip";
             }
 
             function logOut() {

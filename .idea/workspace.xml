@@ -53,8 +53,8 @@
       <file leaf-file-name="handle_account.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/handle_account.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="652">
-              <caret line="328" column="87" selection-start-line="328" selection-start-column="87" selection-end-line="328" selection-end-column="87" />
+            <state relative-caret-position="686">
+              <caret line="330" lean-forward="true" selection-start-line="330" selection-end-line="330" />
             </state>
           </provider>
         </entry>
@@ -489,15 +489,16 @@
       <workItem from="1523715217793" duration="37000" />
       <workItem from="1523726888384" duration="2318000" />
       <workItem from="1523745315812" duration="85000" />
-      <workItem from="1523901797971" duration="8868000" />
+      <workItem from="1523901797971" duration="8986000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69941000" />
+    <option name="totallyTimeSpent" value="70059000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -798,8 +799,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/handle_account.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="652">
-          <caret line="328" column="87" selection-start-line="328" selection-start-column="87" selection-end-line="328" selection-end-column="87" />
+        <state relative-caret-position="686">
+          <caret line="330" lean-forward="true" selection-start-line="330" selection-end-line="330" />
         </state>
       </provider>
     </entry>
