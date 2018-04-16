@@ -22,15 +22,19 @@ public class DownloadAssetMax extends HttpServlet {
         try {
             OutputStream outputStream = response.getOutputStream();
             FileInputStream fileInputStream = new FileInputStream(getClass().getResource("/AssetMax.zip").getFile());
-            byte[] buffer = new byte[4096];
-            int length;
-            while ((length = fileInputStream.read(buffer)) > 0){
-                outputStream.write(buffer, 0, length);
+
+            String filename = "AssetMax.zip";
+
+            response.setContentType("application/zip");
+            response.setHeader("Content-Disposition", "attachment;filename=\"" + filename + "\"");
+
+            int bytes;
+            while ((bytes = fileInputStream.read()) != -1) {
+                System.out.println(bytes);
+                outputStream.write(bytes);
             }
             fileInputStream.close();
-            outputStream.flush();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            response.flushBuffer();
         } catch (IOException e) {
             e.printStackTrace();
         }
