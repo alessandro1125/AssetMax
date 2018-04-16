@@ -80,19 +80,19 @@ public class ScriptPage extends HttpServlet {
                 if (action.equals("check_user")){
                     //Controllo se l'utente è attivato
                     String accountId = request.getParameter("account_id");
-                    String accountName = request.getParameter("account_name");
-                    String accountBalance = request.getParameter("account_balance");
-                    String accountCredit = request.getParameter("account_credit");
-                    String accountCompany = request.getParameter("account_company");
-                    String accountCurrency = request.getParameter("account_currency");
-                    String accountEquity = request.getParameter("account_equity");
-                    String accountFreeMargin = request.getParameter("account_freemargin");
-                    String accountLeverage = request.getParameter("account_leverage");
-                    String accountMargin = request.getParameter("account_margin");
-                    String accountServer = request.getParameter("account_server");
-                    String runningState = request.getParameter("running_state");
+                    String accountName = removeZeroChar(request.getParameter("account_name"));
+                    String accountBalance = removeZeroChar(request.getParameter("account_balance"));
+                    String accountCredit = removeZeroChar(request.getParameter("account_credit"));
+                    String accountCompany = removeZeroChar(request.getParameter("account_company"));
+                    String accountCurrency = removeZeroChar(request.getParameter("account_currency"));
+                    String accountEquity = removeZeroChar(request.getParameter("account_equity"));
+                    String accountFreeMargin = removeZeroChar(request.getParameter("account_freemargin"));
+                    String accountLeverage = removeZeroChar(request.getParameter("account_leverage"));
+                    String accountMargin = removeZeroChar(request.getParameter("account_margin"));
+                    String accountServer = removeZeroChar(request.getParameter("account_server"));
+                    String runningState = removeZeroChar(request.getParameter("running_state"));
                     Calendar calendar = new GregorianCalendar();
-                    String accessTime = calendar.getTime().toString();
+                    String accessTime = removeZeroChar(calendar.getTime().toString());
 
                     if (accountId == null){
                         try {
@@ -100,23 +100,8 @@ public class ScriptPage extends HttpServlet {
                         }catch (IOException e){
                             e.printStackTrace();
                         }
-                    }
-
-                    //rimuovo il caratterre 0 dal time
-                    assert accessTime != null;
-                    byte[] timeBytes = accessTime.getBytes();
-                    ArrayList<Byte> byteTime = new ArrayList<>();
-                    for (Byte bytes : timeBytes){
-                        if (bytes != 0){
-                            byteTime.add(bytes);
-                        }
-                    }
-                    byte[] tmp = new byte[byteTime.size()];
-                    for (int i = 0; i < byteTime.size(); i++){
-                        tmp[i] = byteTime.get(i);
-                    }
-
-                    accessTime = new String(tmp);
+                    }else
+                        accountId = removeZeroChar(accountId);
 
                     //Controllo la corrispondenza
                     ResultSet resultCount = SqlUtils.sqlSelectCount(SqlUtils.getConnectionHeroku(), "assetmaxusers",
@@ -215,5 +200,21 @@ public class ScriptPage extends HttpServlet {
                 e.printStackTrace();
             }
         }
+    }
+
+    private String removeZeroChar(String input){
+        byte[] timeBytes = input.getBytes();
+        ArrayList<Byte> byteTime = new ArrayList<>();
+        for (Byte bytes : timeBytes){
+            if (bytes != 0){
+                byteTime.add(bytes);
+            }
+        }
+        byte[] tmp = new byte[byteTime.size()];
+        for (int i = 0; i < byteTime.size(); i++){
+            tmp[i] = byteTime.get(i);
+        }
+
+        return new String(tmp);
     }
 }
