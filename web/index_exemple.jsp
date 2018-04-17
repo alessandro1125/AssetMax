@@ -20,7 +20,6 @@
             /*String redirectURL = "/login";
             response.sendRedirect(redirectURL);*/
             String protocol = request.getRequestURI();
-            String stringa = new URL(protocol.toString()).getProtocol();
         %>
         <p><%= protocol%></p>
         <%!
