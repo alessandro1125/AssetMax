@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 
 @WebServlet(
-        name = "ServletManager",
+        name = "ServletStylesManager",
         urlPatterns = "/styles/*"
 )
 public class StylesManager extends HttpServlet {
@@ -19,7 +19,7 @@ public class StylesManager extends HttpServlet {
         //Reindirizzo all'unica page .css
         try {
             OutputStream outputStream = response.getOutputStream();
-            FileInputStream fileInputStream = new FileInputStream(getClass().getResource("/style-1.css").getFile());
+            FileInputStream fileInputStream = new FileInputStream(getClass().getResource("/stile-1.css").getFile());
 
             int bytes;
             while ((bytes = fileInputStream.read()) != -1) {
