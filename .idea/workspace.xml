@@ -41,7 +41,7 @@
       <file leaf-file-name="ScriptPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/ScriptPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1496">
+            <state relative-caret-position="1751">
               <caret line="103" column="24" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -62,24 +62,43 @@
       <file leaf-file-name="stile-1.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/stile-1.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3035" />
+            <state relative-caret-position="-2731" />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Home.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Home.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/Home.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="21" column="60" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
+            <state relative-caret-position="221">
+              <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StylesManager.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/StylesManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1315#1316#0" expanded="true" />
+                <element signature="e#1355#1356#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stile-1.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/stile-1.css">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="DownloadAssetMax.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/DownloadAssetMax.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="37" column="25" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
+            <state relative-caret-position="612">
+              <caret line="36" column="35" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="36" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -148,6 +167,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/altervista/org/DownloadAssetMax.java" />
         <option value="$PROJECT_DIR$/web/handle_account.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/altervista/org/Home.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/altervista/org/StylesManager.java" />
       </list>
     </option>
   </component>
@@ -319,11 +339,11 @@
       <recent name="com.altervista.org" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Sync\Heroku Projects\GitHub\AssetMax\AssetMax\src\main\resources" />
       <recent name="E:\Sync\Heroku Projects\GitHub\AssetMax\AssetMax\web\res" />
       <recent name="E:\Sync\Heroku Projects\GitHub\AssetMax\AssetMax\repo\assetx\assetx\3.1" />
       <recent name="E:\Sync\Heroku Projects\GitHub\AssetMax\AssetMax\repo\assetx\assetx\3.0" />
       <recent name="G:\Sync\Heroku Projects\GitHub\AssetMax" />
-      <recent name="G:\Sync\Heroku Projects\GitHub\AssetMax\web" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -516,12 +536,12 @@
       <workItem from="1523745315812" duration="85000" />
       <workItem from="1523901797971" duration="10599000" />
       <workItem from="1523964544944" duration="97000" />
-      <workItem from="1523980379066" duration="896000" />
+      <workItem from="1523980379066" duration="1285000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72665000" />
+    <option name="totallyTimeSpent" value="73054000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -575,20 +595,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5661">
-          <caret line="333" column="106" selection-start-line="333" selection-start-column="106" selection-end-line="333" selection-end-column="106" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/sign_in.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8959">
-          <caret line="527" column="79" selection-start-line="527" selection-start-column="79" selection-end-line="527" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/handle_account.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5406">
@@ -795,29 +801,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/ScriptPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="103" column="24" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/DownloadAssetMax.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="37" column="25" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/stile-1.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3035" />
+        <state relative-caret-position="-2731" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/handle_account.jsp">
@@ -829,8 +815,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/Home.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="60" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
+        <state relative-caret-position="221">
+          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/ScriptPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1751">
+          <caret line="103" column="24" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/DownloadAssetMax.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="35" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="36" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/stile-1.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/StylesManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1315#1316#0" expanded="true" />
+            <element signature="e#1355#1356#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

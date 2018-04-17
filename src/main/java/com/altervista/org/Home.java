@@ -18,10 +18,7 @@ public class Home extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp){
         try {
             RequestDispatcher view;
-            if (req.getPathInfo().equals("style-1.css"))
-                view = req.getRequestDispatcher("style-1.css");
-            else
-                view = req.getRequestDispatcher("login.jsp");
+            view = req.getRequestDispatcher("login.jsp");
             view.forward(req, resp);
         } catch (Exception e) {
             e.printStackTrace();
