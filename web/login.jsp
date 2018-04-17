@@ -19,6 +19,10 @@
     <body class="form-style-8">
 
         <%
+            //Controllo se sono https
+
+
+
             //Controllo l'action
             int action = 0;
             String message, base64Message;

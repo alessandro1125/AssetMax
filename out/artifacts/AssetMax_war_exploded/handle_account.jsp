@@ -26,7 +26,7 @@
         <title>Account Manager</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3mobile.css">
-        <link rel="stylesheet" href="stile-1.css?time=<%= time %>" type="text/css">
+        <link rel="stylesheet" href="/styles" type="text/css">
 
         <style type="text/css">
 
@@ -101,7 +101,9 @@
                  right: 20px; color: #e6e6e6; display: inline;">
         </div>
 
-        <input type="button" class="form-style-1" value="Download AssetMax" onclick="download_assetmax()">
+        <div class="form-style-1">
+            <input type="button" style="width: 200px" value="Download AssetMax" onclick="download_assetmax()">
+        </div>
 
         <div class="form-style-8">
             <p style="display: inline">Current Account Id: <%=accountId%></p>

@@ -18,10 +18,10 @@
             //createTable();
             /*String redirectURL = "/login";
             response.sendRedirect(redirectURL);*/
-
+            String protocol = request.getProtocol();
 
         %>
-
+        <p><%= protocol%></p>
         <%!
 
             /**

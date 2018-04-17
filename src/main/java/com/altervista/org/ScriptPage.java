@@ -45,6 +45,9 @@ public class ScriptPage extends HttpServlet {
             }catch (IOException e){
                 e.printStackTrace();
             }
+            //Inizializzo il JSON di risposta
+
+
             assert out != null;
             //Controllo se la versione è corretta
             boolean versionControl = false;
