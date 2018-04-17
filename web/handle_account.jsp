@@ -102,7 +102,7 @@
         </div>
 
         <div class="form-style-1">
-            <input type="button" value="Download AssetMax" onclick="download_assetmax()">
+            <input type="button" style="width: 200px" value="Download AssetMax" onclick="download_assetmax()">
         </div>
 
         <div class="form-style-8">
