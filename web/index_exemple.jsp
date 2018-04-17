@@ -19,7 +19,7 @@
             //createTable();
             /*String redirectURL = "/login";
             response.sendRedirect(redirectURL);*/
-            StringBuffer protocol = request.getRequestURL();
+            String protocol = request.getRequestURI();
             String stringa = new URL(protocol.toString()).getProtocol();
         %>
         <p><%= protocol%></p>
