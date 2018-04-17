@@ -46,7 +46,7 @@ public class ScriptPage extends HttpServlet {
                 e.printStackTrace();
             }
             //Inizializzo il JSON di risposta
-
+            JSONObject outputObject = new JSONObject();
 
             assert out != null;
             //Controllo se la versione è corretta
@@ -99,8 +99,8 @@ public class ScriptPage extends HttpServlet {
 
                     if (accountId == null){
                         try {
-                            out.write("Errore di sistema: parametri nulli".getBytes());
-                        }catch (IOException e){
+                            outputObject.put("response", "Errore di sistema: parametri nulli");
+                        }catch (JSONException e){
                             e.printStackTrace();
                         }
                     }else
@@ -114,8 +114,8 @@ public class ScriptPage extends HttpServlet {
                         resultCount.next();
                         if(resultCount.getInt("total") != 1){
                             try {
-                                out.write("0".getBytes());
-                            }catch (IOException e){
+                                outputObject.put("response", "0");
+                            }catch (JSONException e){
                                 e.printStackTrace();
                             }
                         }else {
@@ -128,7 +128,7 @@ public class ScriptPage extends HttpServlet {
                                 if (result.getString("active").equals("1")){
                                     //Autenticato
                                     try {
-                                        out.write("1".getBytes());
+                                        outputObject.put("response", "1");
 
                                         //Registro l'accesso
                                         //Controllo se è già presente un record per questo utente
@@ -161,13 +161,13 @@ public class ScriptPage extends HttpServlet {
                                             SqlUtils.sqlUpdate(SqlUtils.getConnectionHeroku(),
                                                     "assetmaxuseractives", records, params);
                                         }
-                                    }catch (IOException e){
+                                    }catch (JSONException e){
                                         e.printStackTrace();
                                     }
                                 }else {
                                     try {
-                                        out.write("0".getBytes());
-                                    }catch (IOException e){
+                                        outputObject.put("response", "0");
+                                    }catch (JSONException e){
                                         e.printStackTrace();
                                     }
                                 }
@@ -182,13 +182,14 @@ public class ScriptPage extends HttpServlet {
             }else {
                 //se la versione non è corretta
                 try {
-                    out.write("Versione Obsoleta".getBytes());
-                }catch (IOException e){
+                    outputObject.put("response", "2");
+                }catch (JSONException e){
                     e.printStackTrace();
                 }
             }
 
             try {
+                out.write(outputObject.toString().getBytes());
                 out.flush();
                 out.close();
             } catch (IOException e) {
