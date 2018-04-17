@@ -50,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="handle_account.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="handle_account.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/handle_account.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+            <state relative-caret-position="476">
+              <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -75,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StylesManager.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StylesManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/StylesManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+            <state relative-caret-position="357">
+              <caret line="21" column="96" selection-start-line="21" selection-start-column="96" selection-end-line="21" selection-end-column="96" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1315#1316#0" expanded="true" />
@@ -165,9 +165,9 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/altervista/org/ScriptPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/altervista/org/DownloadAssetMax.java" />
-        <option value="$PROJECT_DIR$/web/handle_account.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/altervista/org/Home.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/altervista/org/StylesManager.java" />
+        <option value="$PROJECT_DIR$/web/handle_account.jsp" />
       </list>
     </option>
   </component>
@@ -536,12 +536,12 @@
       <workItem from="1523745315812" duration="85000" />
       <workItem from="1523901797971" duration="10599000" />
       <workItem from="1523964544944" duration="97000" />
-      <workItem from="1523980379066" duration="1429000" />
+      <workItem from="1523980379066" duration="1675000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73198000" />
+    <option name="totallyTimeSpent" value="73444000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -806,13 +806,6 @@
         <state relative-caret-position="-2731" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/handle_account.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/Home.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -845,13 +838,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/StylesManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+        <state relative-caret-position="357">
+          <caret line="21" column="96" selection-start-line="21" selection-start-column="96" selection-end-line="21" selection-end-column="96" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1315#1316#0" expanded="true" />
             <element signature="e#1355#1356#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/handle_account.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
         </state>
       </provider>
     </entry>
