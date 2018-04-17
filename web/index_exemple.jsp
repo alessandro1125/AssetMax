@@ -22,7 +22,7 @@
             StringBuffer protocol = request.getRequestURL();
             String stringa = new URL(protocol.toString()).getProtocol();
         %>
-        <p><%= stringa%></p>
+        <p><%= protocol%></p>
         <%!
 
             /**
