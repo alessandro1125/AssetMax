@@ -69,8 +69,8 @@
       <file leaf-file-name="Home.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/Home.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+            <state relative-caret-position="255">
+              <caret line="21" column="60" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -309,21 +309,21 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Sync\Heroku Projects\GitHub\AssetMax\AssetMax\web" />
+      <recent name="E:\Sync\Heroku Projects\GitHub\AssetMax\AssetMax\src\main\resources" />
+      <recent name="G:\Sync\Heroku Projects\GitHub\AssetMax\AssetMax\repo\assetx\assetx\2.0" />
+      <recent name="G:\Sync\Heroku Projects\GitHub\AssetMax\repo" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.altervista.org" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Sync\Heroku Projects\GitHub\AssetMax\AssetMax\web\res" />
       <recent name="E:\Sync\Heroku Projects\GitHub\AssetMax\AssetMax\repo\assetx\assetx\3.1" />
       <recent name="E:\Sync\Heroku Projects\GitHub\AssetMax\AssetMax\repo\assetx\assetx\3.0" />
       <recent name="G:\Sync\Heroku Projects\GitHub\AssetMax" />
       <recent name="G:\Sync\Heroku Projects\GitHub\AssetMax\web" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.altervista.org" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Sync\Heroku Projects\GitHub\AssetMax\AssetMax\src\main\resources" />
-      <recent name="E:\Sync\Heroku Projects\GitHub\AssetMax\AssetMax\web" />
-      <recent name="G:\Sync\Heroku Projects\GitHub\AssetMax\AssetMax\repo\assetx\assetx\2.0" />
-      <recent name="G:\Sync\Heroku Projects\GitHub\AssetMax\repo" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -516,12 +516,12 @@
       <workItem from="1523745315812" duration="85000" />
       <workItem from="1523901797971" duration="10599000" />
       <workItem from="1523964544944" duration="97000" />
-      <workItem from="1523980379066" duration="668000" />
+      <workItem from="1523980379066" duration="896000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72437000" />
+    <option name="totallyTimeSpent" value="72665000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -829,8 +829,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/Home.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        <state relative-caret-position="255">
+          <caret line="21" column="60" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
         </state>
       </provider>
     </entry>

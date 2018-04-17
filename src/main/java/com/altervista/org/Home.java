@@ -9,15 +9,19 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(
-        name = "HomeServlet"
-        //urlPatterns = {"/"}
+        name = "HomeServlet",
+        urlPatterns = {"/"}
 )
 public class Home extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp){
         try {
-            RequestDispatcher view = req.getRequestDispatcher("login.jsp");
+            RequestDispatcher view;
+            if (req.getPathInfo().equals("style-1.css"))
+                view = req.getRequestDispatcher("style-1.css");
+            else
+                view = req.getRequestDispatcher("login.jsp");
             view.forward(req, resp);
         } catch (Exception e) {
             e.printStackTrace();

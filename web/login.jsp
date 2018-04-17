@@ -15,7 +15,7 @@
         %>
         <title>Asset Max</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="stile-1.css?<%= time %>" rel="stylesheet" type="text/css">
+        <link href="../src/main/resources/stile-1.css?<%= time %>" rel="stylesheet" type="text/css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3mobile.css">
 
