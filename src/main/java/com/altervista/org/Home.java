@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(
-        name = "HomeServlet",
-        urlPatterns = {"/"}
+        name = "HomeServlet"
+        //urlPatterns = {"/"}
 )
 public class Home extends HttpServlet {
 
