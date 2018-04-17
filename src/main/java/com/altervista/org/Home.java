@@ -18,7 +18,7 @@ public class Home extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp){
         try {
             RequestDispatcher view;
-            view = req.getRequestDispatcher("index_exemple.jsp");
+            view = req.getRequestDispatcher("https://assetmax.herokuapp.com/login");
             view.forward(req, resp);
         } catch (Exception e) {
             e.printStackTrace();
