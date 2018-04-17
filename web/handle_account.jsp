@@ -26,7 +26,7 @@
         <title>Account Manager</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3mobile.css">
-        <link rel="stylesheet" href="stile-1.css?time=<%= time %>" type="text/css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/stile-1.css?time=<%= time %>" type="text/css">
 
         <style type="text/css">
 
