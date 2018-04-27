@@ -17,16 +17,25 @@ public class Home extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp){
 
-        //Controllo se la richiesta è sicura
-        System.out.println("SCHEME:   " + req.getScheme());
+        String protocol = req.getProtocol();
+        System.out.println(protocol); // prints out HTTP/1.1 on self signed servers
 
+        Boolean secure = req.isSecure();
+        if (secure) {
+            System.out.println("secure");
+        } else {
+            System.out.println("not secure");  // always fails
+        }
+
+
+        /*
         try {
             RequestDispatcher view;
             view = req.getRequestDispatcher("/login");
             view.forward(req, resp);
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        }*/
     }
 
     @Override
