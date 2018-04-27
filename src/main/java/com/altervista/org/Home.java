@@ -18,13 +18,7 @@ public class Home extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp){
 
         //Controllo se la richiesta è sicura
-        if(!req.isSecure()) {
-            try {
-                resp.sendRedirect("https://assetmax.herokuapp.com");
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+        System.out.println("SCHEME:   req.getScheme()");
 
         try {
             RequestDispatcher view;
