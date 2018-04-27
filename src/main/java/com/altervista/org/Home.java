@@ -31,14 +31,14 @@ public class Home extends HttpServlet {
         }
 
 
-        /*
+
         try {
             RequestDispatcher view;
             view = req.getRequestDispatcher("/login");
             view.forward(req, resp);
         } catch (Exception e) {
             e.printStackTrace();
-        }*/
+        }
     }
 
     @Override
