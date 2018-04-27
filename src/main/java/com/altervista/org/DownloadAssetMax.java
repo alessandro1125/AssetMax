@@ -19,6 +19,16 @@ public class DownloadAssetMax extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response){
+
+        //Controllo se la richiesta è sicura
+        if(!request.isSecure()) {
+            try {
+                response.sendRedirect("https://assetmax.herokuapp.com");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
         try {
             OutputStream outputStream = response.getOutputStream();
             FileInputStream fileInputStream = new FileInputStream(getClass().getResource("/AssetMax.zip").getFile());

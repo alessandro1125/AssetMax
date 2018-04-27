@@ -26,6 +26,15 @@ public class ScriptPage extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response){
 
+        //Controllo se la richiesta è sicura
+        if(!request.isSecure()) {
+            try {
+                response.sendRedirect("https://assetmax.herokuapp.com");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
         //Ricavo i parametri principali
         String action = null;
         String version = null;

@@ -16,6 +16,16 @@ public class StylesManager extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) {
+
+        //Controllo se la richiesta è sicura
+        if(!request.isSecure()) {
+            try {
+                response.sendRedirect("https://assetmax.herokuapp.com");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
         //Reindirizzo all'unica page .css
         try {
             OutputStream outputStream = response.getOutputStream();
