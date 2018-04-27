@@ -1,5 +1,7 @@
 package com.altervista.org;
 
+import com.altervista.org.utils.Utils;
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,15 +22,7 @@ public class StylesManager extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) {
 
         //Controllo se il protocollo è https
-        if (request.getHeader(X_FORWARDED_PROTO) != null) {
-            if (request.getHeader(X_FORWARDED_PROTO).indexOf("https") != 0) {
-                try {
-                    response.sendRedirect("https://assetmax.herokuapp.com");
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
+        Utils.checkForHttpsProtocol(request, response);
 
         //Reindirizzo all'unica page .css
         try {

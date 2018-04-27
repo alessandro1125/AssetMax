@@ -1,5 +1,6 @@
 package com.altervista.org;
 
+import com.altervista.org.utils.Utils;
 import com.assetx.libraries.utils.http.HttpRequestInstance;
 
 import javax.servlet.annotation.WebServlet;
@@ -23,15 +24,7 @@ public class DownloadAssetMax extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response){
 
         //Controllo se il protocollo è https
-        if (request.getHeader(X_FORWARDED_PROTO) != null) {
-            if (request.getHeader(X_FORWARDED_PROTO).indexOf("https") != 0) {
-                try {
-                    response.sendRedirect("https://assetmax.herokuapp.com");
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
+        Utils.checkForHttpsProtocol(request, response);
 
         try {
             OutputStream outputStream = response.getOutputStream();

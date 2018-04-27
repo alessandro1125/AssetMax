@@ -17,8 +17,6 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
 
-import static com.google.common.net.HttpHeaders.X_FORWARDED_PROTO;
-
 @WebServlet(
         name = "ScriptPageServlet",
         urlPatterns = {"/script_page/*"}

@@ -1,5 +1,7 @@
 package com.altervista.org;
 
+import com.altervista.org.utils.Utils;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
@@ -20,15 +22,7 @@ public class Home extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp){
 
         //Controllo se il protocollo è https
-        if (req.getHeader(X_FORWARDED_PROTO) != null) {
-            if (req.getHeader(X_FORWARDED_PROTO).indexOf("https") != 0) {
-                try {
-                    resp.sendRedirect("https://assetmax.herokuapp.com");
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
+        Utils.checkForHttpsProtocol(req, resp);
 
 
 

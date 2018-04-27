@@ -31,7 +31,7 @@ public class Main {
         // Servlet 3.0 annotation will work
         File additionWebInfClasses = new File("target/classes");
         WebResourceRoot resources = new StandardRoot(ctx);
-        resources.addPreResources(new DirResourceSet(resources, "/WEB-INF/classes",
+        resources.addPreResources(new DirResourceSet(resources, "/WEB-INF/classes",//TODO resolve
                 additionWebInfClasses.getAbsolutePath(), "/"));
         ctx.setResources(resources);
 
