@@ -19,11 +19,11 @@ public class Home extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp){
 
-        //Cotnrollo se il protocollo è https
+        //Controllo se il protocollo è https
         if (req.getHeader(X_FORWARDED_PROTO) != null) {
             if (req.getHeader(X_FORWARDED_PROTO).indexOf("https") != 0) {
                 try {
-                    resp.sendRedirect("https://" + req.getServerName() + (req.getPathInfo() == null ? "" : req.getPathInfo()));
+                    resp.sendRedirect("https://assetmax.herokuapp.com");
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

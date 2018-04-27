@@ -8,6 +8,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
+import static com.google.common.net.HttpHeaders.X_FORWARDED_PROTO;
+
 @WebServlet(
         name = "ServletStylesManager",
         urlPatterns = "/styles/*"
@@ -17,12 +19,14 @@ public class StylesManager extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) {
 
-        //Controllo se la richiesta è sicura
-        if(!request.isSecure()) {
-            try {
-                response.sendRedirect("https://assetmax.herokuapp.com");
-            } catch (IOException e) {
-                e.printStackTrace();
+        //Controllo se il protocollo è https
+        if (request.getHeader(X_FORWARDED_PROTO) != null) {
+            if (request.getHeader(X_FORWARDED_PROTO).indexOf("https") != 0) {
+                try {
+                    response.sendRedirect("https://assetmax.herokuapp.com");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         }
 
