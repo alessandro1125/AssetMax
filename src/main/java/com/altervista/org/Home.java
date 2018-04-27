@@ -18,7 +18,7 @@ public class Home extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp){
 
         //Controllo se la richiesta è sicura
-        System.out.println("SCHEME:   req.getScheme()");
+        System.out.println("SCHEME:   " + req.getScheme());
 
         try {
             RequestDispatcher view;
