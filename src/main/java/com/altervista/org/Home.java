@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import static com.google.common.net.HttpHeaders.X_FORWARDED_PROTO;
+
 @WebServlet(
         name = "HomeServlet",
         urlPatterns = {"/"}
@@ -17,8 +19,17 @@ public class Home extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp){
 
-        System.out.println(req.getRequestURI());
-        System.out.println(req.getRequestURL().toString());
+        //Cotnrollo se il protocollo è https
+        if (req.getHeader(X_FORWARDED_PROTO) != null) {
+            if (req.getHeader(X_FORWARDED_PROTO).indexOf("https") != 0) {
+                try {
+                    resp.sendRedirect("https://" + req.getServerName() + (req.getPathInfo() == null ? "" : req.getPathInfo()));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
 
         /*
         try {
