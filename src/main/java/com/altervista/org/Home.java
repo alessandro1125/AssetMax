@@ -18,7 +18,7 @@ public class Home extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp){
 
         System.out.println(req.getRequestURI());
-
+        System.out.println(req.getRequestURL().toString());
 
         /*
         try {
