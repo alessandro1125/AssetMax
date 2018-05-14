@@ -20,7 +20,7 @@ public class DoOperations extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp){
 
-        
+
         //Controllo se il protocollo è https
         Utils.checkForHttpsProtocol(req, resp);
 

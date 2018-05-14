@@ -3,6 +3,7 @@
 <%@ page import="java.net.URI" %>
 <%@ page import="java.sql.*" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="java.net.URL" %>
 <html>
     <head>
         <title>Get Advertisment</title>
@@ -18,8 +19,7 @@
             //createTable();
             /*String redirectURL = "/login";
             response.sendRedirect(redirectURL);*/
-            String protocol = request.getProtocol();
-
+            String protocol = request.getRequestURI();
         %>
         <p><%= protocol%></p>
         <%!

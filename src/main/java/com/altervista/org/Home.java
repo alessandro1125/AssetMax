@@ -24,8 +24,6 @@ public class Home extends HttpServlet {
         //Controllo se il protocollo è https
         Utils.checkForHttpsProtocol(req, resp);
 
-
-
         try {
             RequestDispatcher view;
             view = req.getRequestDispatcher("/login");
