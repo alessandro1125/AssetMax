@@ -14,7 +14,7 @@ import java.io.*;
 public class OTAHttpHelper extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response){
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         try {
             OutputStream outputStream = response.getOutputStream();
@@ -29,9 +29,10 @@ public class OTAHttpHelper extends HttpServlet {
             }
             */
 
-            byte[] bytes = fileInputStream.readAllBytes();
-            for (byte by : bytes) {
-                outputStream.write(by);
+            int bytes = fileInputStream.read();
+            while (bytes != -1){
+                outputStream.write(bytes);
+                bytes = fileInputStream.read();
             }
 
             response.flushBuffer();
