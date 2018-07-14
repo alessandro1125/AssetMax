@@ -138,7 +138,7 @@ public class ScriptPage extends HttpServlet {
                                                 accountId + "'");
                                         assert accesResult != null;
                                         accesResult.next();
-                                        HashMap<String, String> records = new HashMap<>();
+                                        HashMap records = new HashMap();
                                         records.put("account_id", accountId);
                                         records.put("account_name", accountName);
                                         records.put("last_access", accessTime);
