@@ -12,16 +12,13 @@
     <head>
         <title>Asset Max</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="/styles" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="/styles" type="text/css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3mobile.css">
     </head>
     <body class="form-style-8">
 
         <%
-            //Controllo se sono https
-
-
 
             //Controllo l'action
             int action = 0;
