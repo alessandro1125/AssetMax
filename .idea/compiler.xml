@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="AssetMax" target="9" />
+      <module name="AssetMax" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
