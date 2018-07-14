@@ -3,7 +3,6 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>com.altervista.ipq</groupId>
     <artifactId>asset-max</artifactId>
     <version>1.0-SNAPSHOT</version>
@@ -111,7 +110,7 @@
         </dependency>
     </dependencies>
 
-    <!--
+
     <build>
         <finalName>assetmax</finalName>
         <plugins>
@@ -141,26 +140,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>9</source>
-                    <target>9</target>
+                    <source>3.0.1</source>
                 </configuration>
-            </plugin>
-        </plugins>
-    </build>
-    -->
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <version>3.0.1</version>
-                <executions>
-                    <execution>
-                        <id>copy-dependencies</id>
-                        <phase>package</phase>
-                        <goals><goal>copy-dependencies</goal></goals>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>
