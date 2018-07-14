@@ -136,6 +136,7 @@
                     </execution>
                 </executions>
             </plugin>
+            <!--
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -143,6 +144,7 @@
                     <source>3.1</source>
                 </configuration>
             </plugin>
+            -->
         </plugins>
     </build>
 </project>
