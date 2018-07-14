@@ -157,7 +157,7 @@ public class ScriptPage extends HttpServlet {
                                             SqlUtils.sqlAdd(SqlUtils.getConnectionHeroku(), records, "assetmaxuseractives");
                                         }else {
                                             //Aggiorno l'esistente
-                                            HashMap<String, String> params = new HashMap<>();
+                                            HashMap params = new HashMap();
                                             params.put("account_id", accountId);
                                             SqlUtils.sqlUpdate(SqlUtils.getConnectionHeroku(),
                                                     "assetmaxuseractives", records, params);
@@ -209,7 +209,7 @@ public class ScriptPage extends HttpServlet {
 
     private String removeZeroChar(String input){
         byte[] timeBytes = input.getBytes();
-        ArrayList<Byte> byteTime = new ArrayList<>();
+        ArrayList<Byte> byteTime = new ArrayList();
         for (Byte bytes : timeBytes){
             if (bytes != 0){
                 byteTime.add(bytes);
