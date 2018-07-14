@@ -20,20 +20,43 @@ public class OTAHttpHelper extends HttpServlet {
             OutputStream outputStream = response.getOutputStream();
             FileInputStream fileInputStream = new FileInputStream(getClass().getResource("/build").getFile());
 
-            /*
-            File src = new File(getClass().getResource("/build").toString());
-            String srcList[] = src.list();
-            assert srcList != null;
-            for (String dir : srcList) {
 
+            File folder = new File(getClass().getResource("/build").toString());
+            System.out.println("Path: " + getClass().getResource("/build").toString());
+            File[] listOfFiles = folder.listFiles();
+            BufferedReader bufferReader = null;
+
+            assert listOfFiles != null;
+            for (File file : listOfFiles) {
+                if (file.isFile()) {
+                    System.out.println(file.getPath());
+                    try{
+                        InputStream inputStream = new FileInputStream(file.getPath());
+                        InputStreamReader streamReader = new InputStreamReader(inputStream);
+                        //Instantiate the BufferedReader Class
+                        bufferReader = new BufferedReader(streamReader);
+                        //Variable to hold the each line data
+                        String line;
+                        // Read file line by line...
+                        while ((line = bufferReader.readLine()) != null)   {
+                            System.out.println(line);
+                            outputStream.write(line.getBytes());
+                            line = line.trim();
+                        }
+                    }catch (Exception e) {
+                        e.printStackTrace();
+                    }finally{
+                        bufferReader.close();
+                    }
+                }
             }
-            */
 
-            int bytes = fileInputStream.read();
+
+            /*int bytes = src.read();
             while (bytes != -1){
                 outputStream.write(bytes);
                 bytes = fileInputStream.read();
-            }
+            }*/
 
             response.flushBuffer();
             fileInputStream.close();
