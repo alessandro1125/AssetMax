@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
+import java.util.Arrays;
 
 @WebServlet(
         name = "OTAHttpHelper",
@@ -16,21 +17,32 @@ public class OTAHttpHelper extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws NullPointerException, IOException {
 
-        try {
-            OutputStream outputStream = response.getOutputStream();
-            //FileInputStream fileInputStream = new FileInputStream(getClass().getResource("/build").getFile());
+        //OutputStream outputStream = response.getOutputStream();
+        //FileInputStream fileInputStream = new FileInputStream(getClass().getResource("/build").getFile());
 
 
-            System.out.println("POrco dio");
-            //System.out.println("PAtH: " + );
+        System.out.println("POrco dio");
+        //System.out.println("PAtH: " + );
 
 
-            String path = OTAHttpHelper.class
-                    .getClassLoader().getResource("AssetMax.zip").toString();
+        String path = Home.class
+                .getClassLoader().getResource("AssetMax.zip").toString();
 
-            File folder = new File("../"+path);
+        path = path.substring(5, path.length()-12) + "build";
 
-            File pathList[] = folder.listFiles();
+
+        File folder = new File(path);
+        System.out.println(Arrays.toString(folder.list()));
+
+        PythonInterpreter interpreter = new PythonInterpreter();
+        interpreter.exec("ls "+path);
+        interpreter.exec("python -m SimpleHTTPServer");
+
+        //System.out.println(pathList.length);
+
+        //for (String name : pathList)
+        //    System.out.println(folder.getPath());
+            /*
             assert pathList != null;
             for (File pathFile : pathList)
                 System.out.println((pathFile != null) ? "PATH: " + pathFile.getPath() : "IS a FILE");
@@ -80,9 +92,9 @@ public class OTAHttpHelper extends HttpServlet {
                 bytes = fileInputStream.read();
             }*/
 
-            response.flushBuffer();
-            //fileInputStream.close();
-            outputStream.close();
+        //response.flushBuffer();
+        //fileInputStream.close();
+        //outputStream.close();
 
             /*
             String filename = "AssetMax.zip";
@@ -98,8 +110,5 @@ public class OTAHttpHelper extends HttpServlet {
             fileInputStream.close();
             response.flushBuffer();
             */
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }
