@@ -18,7 +18,7 @@ public class OTAHttpHelper extends HttpServlet {
 
         try {
             OutputStream outputStream = response.getOutputStream();
-            FileInputStream fileInputStream = new FileInputStream(getClass().getResource("/build").getFile());
+            //FileInputStream fileInputStream = new FileInputStream(getClass().getResource("/build").getFile());
 
 
             System.out.print(getServletContext().getContextPath());
@@ -62,7 +62,7 @@ public class OTAHttpHelper extends HttpServlet {
             }*/
 
             response.flushBuffer();
-            fileInputStream.close();
+            //fileInputStream.close();
             outputStream.close();
 
             /*
