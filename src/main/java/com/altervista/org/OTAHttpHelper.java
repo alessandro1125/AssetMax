@@ -23,7 +23,7 @@ public class OTAHttpHelper extends HttpServlet {
 
             System.out.println("POrco dio");
             System.out.println("PAtH: " + OTAHttpHelper.class
-                    .getClassLoader().getResource("sql/script.sql").toString());
+                    .getClassLoader().getResource("AssetMax.zip").toString());
 
 
             /*
