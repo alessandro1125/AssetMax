@@ -22,8 +22,8 @@
       <file leaf-file-name="OTAHttpHelper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/OTAHttpHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
+            <state relative-caret-position="229">
+              <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -326,12 +326,12 @@
       <workItem from="1531589674281" duration="51000" />
       <workItem from="1531590045283" duration="25000" />
       <workItem from="1531590122530" duration="11546000" />
-      <workItem from="1531668264111" duration="2778000" />
+      <workItem from="1531668264111" duration="2885000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14489000" />
+    <option name="totallyTimeSpent" value="14596000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="23" width="1866" height="1057" extended-state="0" />
@@ -459,8 +459,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/OTAHttpHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
+        <state relative-caret-position="229">
+          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
