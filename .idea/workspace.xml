@@ -7,18 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2e4ca0d-0031-44f0-840b-992c2ea855f9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/altervista/org/OTAHttpHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/altervista/org/OTAHttpHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/altervista/org/DoOperations.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/altervista/org/DoOperations.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/altervista/org/DownloadAssetMax.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/altervista/org/DownloadAssetMax.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/altervista/org/Home.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/altervista/org/Home.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/altervista/org/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/altervista/org/Login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/altervista/org/OTAHttpHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/altervista/org/OTAHttpHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/altervista/org/ScriptPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/altervista/org/ScriptPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/altervista/org/SignIn.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/altervista/org/SignIn.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/altervista/org/StylesManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/altervista/org/StylesManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/altervista/org/utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/altervista/org/utils/Utils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/launch/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/launch/Main.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,8 +22,8 @@
       <file leaf-file-name="OTAHttpHelper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/OTAHttpHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="63" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
+            <state relative-caret-position="379">
+              <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -337,12 +326,12 @@
       <workItem from="1531589674281" duration="51000" />
       <workItem from="1531590045283" duration="25000" />
       <workItem from="1531590122530" duration="11546000" />
-      <workItem from="1531668264111" duration="1932000" />
+      <workItem from="1531668264111" duration="2778000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13643000" />
+    <option name="totallyTimeSpent" value="14489000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="23" width="1866" height="1057" extended-state="0" />
@@ -470,8 +459,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/OTAHttpHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="63" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
+        <state relative-caret-position="379">
+          <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

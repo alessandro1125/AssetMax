@@ -14,7 +14,7 @@ import java.io.*;
 public class OTAHttpHelper extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws NullPointerException, IOException {
 
         try {
             OutputStream outputStream = response.getOutputStream();
@@ -22,12 +22,27 @@ public class OTAHttpHelper extends HttpServlet {
 
 
             System.out.println("POrco dio");
-            System.out.println("PAtH: " + OTAHttpHelper.class
-                    .getClassLoader().getResource("AssetMax.zip").toString());
+            System.out.println("PAtH: " + );
+
+
+            String path = OTAHttpHelper.class
+                    .getClassLoader().getResource("AssetMax.zip").toString();
+
+            File folder = new File("../"+path);
+
+            File pathList[] = folder.listFiles();
+            assert pathList != null;
+            System.out.println("PAth 1 : " + pathList[0].getPath());
+
+
+            /*while (pathList != null){
+
+                pathList
+            }*/
+
 
 
             /*
-            File folder = new File(getClass().getResource("AssetMax.zip").getPath());
             System.out.println("Path: " + getClass().getResource("AssetMax.zip").getPath());
             File[] listOfFiles = folder.listFiles();
             BufferedReader bufferReader = null;
