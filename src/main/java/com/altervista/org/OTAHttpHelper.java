@@ -20,9 +20,10 @@ public class OTAHttpHelper extends HttpServlet {
             OutputStream outputStream = response.getOutputStream();
             //FileInputStream fileInputStream = new FileInputStream(getClass().getResource("/build").getFile());
 
-            
+
             System.out.println("POrco dio");
-            System.out.println("PAtH: " + getServletContext().getContextPath());
+            System.out.println("PAtH: " + OTAHttpHelper.class
+                    .getClassLoader().getResource("sql/script.sql").toString());
 
 
             /*
