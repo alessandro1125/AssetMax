@@ -32,7 +32,8 @@ public class OTAHttpHelper extends HttpServlet {
 
             File pathList[] = folder.listFiles();
             assert pathList != null;
-            System.out.println("PAth 1 : " + pathList[0].getPath());
+            for (File pathFile : pathList)
+                System.out.println((pathFile != null) ? "PATH: " + pathFile.getPath() : "IS a FILE");
 
 
             /*while (pathList != null){
