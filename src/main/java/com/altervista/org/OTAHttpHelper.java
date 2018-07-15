@@ -20,8 +20,10 @@ public class OTAHttpHelper extends HttpServlet {
             OutputStream outputStream = response.getOutputStream();
             //FileInputStream fileInputStream = new FileInputStream(getClass().getResource("/build").getFile());
 
+            
+            System.out.println("POrco dio");
+            System.out.println("PAtH: " + getServletContext().getContextPath());
 
-            System.out.print("PAtH: " + getServletContext().getContextPath());
 
             /*
             File folder = new File(getClass().getResource("AssetMax.zip").getPath());

@@ -22,8 +22,8 @@
       <file leaf-file-name="OTAHttpHelper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/OTAHttpHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="330">
+              <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -326,12 +326,12 @@
       <workItem from="1531589674281" duration="51000" />
       <workItem from="1531590045283" duration="25000" />
       <workItem from="1531590122530" duration="11546000" />
-      <workItem from="1531668264111" duration="1037000" />
+      <workItem from="1531668264111" duration="1362000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12748000" />
+    <option name="totallyTimeSpent" value="13073000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="23" width="1866" height="1057" extended-state="0" />
@@ -378,6 +378,11 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/OTAHttpHelper.java">
@@ -454,8 +459,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/altervista/org/OTAHttpHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="330">
+          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
